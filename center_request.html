@@ -5,7 +5,7 @@
 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 
 	<meta name="viewport" content="width=device-width">
-	<link href="https://fonts.googleapis.com/css?family=Roboto:400,400i,700,700i,900&amp;subset=cyrillic,cyrillic-ext" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,500,700,700i,900&amp;subset=cyrillic,cyrillic-ext" rel="stylesheet">
     <title>Заявка </title>
                 <!--[if lt IE 9]><![endif]-->
                 <link rel="icon" type="image/png" href="favicon.ico" />
@@ -15,10 +15,12 @@
 
     	<link rel="stylesheet" href="local/layout/css/style980.css" media="screen and (max-width: 1210px)">
     	<link rel="stylesheet" href="local/layout/css/style760.css" media="screen and (max-width: 1020px)">
-    	<link rel="stylesheet" href="local/layout/css/style480.css" media="screen and (max-width: 759px)">        
+    	<link rel="stylesheet" href="local/layout/css/style480.css" media="screen and (max-width: 759px)">
+
+        <link rel="stylesheet" href="new/css/style.css" />
 </head>
 <body>
-<div class="wrap_h"><div class="wrap_in">
+<div class="wrap_h wrap-cabinet"><div class="wrap_in">
   <header>
 	<div class="top">
 		<div class="wrap">
@@ -52,71 +54,71 @@
         <ul>
 
 
-	
-	
-            <li><a href="/centers/">Центры</a></li>    
-            
-	
 
-	
-	
-            <li><a href="/organizations/">Организации</a></li>    
-            
-	
 
-	
-	
+            <li><a href="/centers/">Центры</a></li>
+
+
+
+
+
+            <li><a href="/organizations/">Организации</a></li>
+
+
+
+
+
             <li class="sub_nav "><a href="/docs/">Официальные документы</a>
 						<div class="nav_top_sub">
 							<div class="wrap">
-								<ul>            
-    
-	
+								<ul>
 
-	
-	
-            <li><a href="/docs/?category=56">Нормативные правовые документы</a></li>    
-        </ul><ul>    
-	
 
-	
-	
-            <li><a href="/docs/?category=61">Документы конкурсного отбора</a></li>    
-            
-	
 
-			</ul><div class="clear"></div></div></div></li>	
-	
-            <li><a href="/councils/">Советы</a></li>    
-            
-	
 
-	
-	
-            <li><a href="/results/">Результаты работы центров</a></li>    
-            
-	
 
-	
-	
+            <li><a href="/docs/?category=56">Нормативные правовые документы</a></li>
+        </ul><ul>
+
+
+
+
+            <li><a href="/docs/?category=61">Документы конкурсного отбора</a></li>
+
+
+
+			</ul><div class="clear"></div></div></div></li>
+
+            <li><a href="/councils/">Советы</a></li>
+
+
+
+
+
+            <li><a href="/results/">Результаты работы центров</a></li>
+
+
+
+
+
             <li class="sub_nav "><a href="/help/">Помощь</a>
 						<div class="nav_top_sub">
 							<div class="wrap">
-								<ul>            
-    
-	
+								<ul>
 
-	
-	
-            <li><a href="/help/faq/">Вопросы и ответы</a></li>    
-        </ul><ul>    
-	
 
-	
-	
-            <li><a href="/help/contacts/">Контакты</a></li>    
-            
-	
+
+
+
+            <li><a href="/help/faq/">Вопросы и ответы</a></li>
+        </ul><ul>
+
+
+
+
+            <li><a href="/help/contacts/">Контакты</a></li>
+
+
 
 	</ul><div class="clear"></div></div></div></li>
 </ul>
@@ -130,33 +132,38 @@
 </header>
 <div class="wrap">
 	<section id="content">
-<div class="bread">
-				<a href="/" title="Главная" >Главная</a> <span>&rarr;</span> 
-				<a href="/personal/" title="Личный кабинет" >Личный кабинет</a> <span>&rarr;</span> 
-				<a href="/personal/center/" title="Инициатор создания центра" >Инициатор создания центра</a> <span>&rarr;</span> Заявка на участие</div>                <div class="entry">
-		<h1>Заявка </h1>
-        
 
-<div class="cabinet">
 	<div class="cabinet-menu">
 		<div><a href="/personal/center/profile/">Профиль</a></div>
 		<div class="active"><a href="/personal/center/request/">Заявка на участие</a></div>
 		<div><a>Формы</a></div>
 		<div><a href="/index.php?logout=yes">Выход</a></div>
 	</div>
-	<div class="cabinet-container">
-		<div class="cabinet-content">
+
+<div class="bread">
+				<a href="/personal/center/" title="Инициатор создания центра" >Инициатор создания центра</a> <span></span> Заявка на участие</div>
 <blockquote class='time_info'>
 <b>Внимание!</b><br />
 <p>Срок подачи документов для участия в конкурсном отборе до: <b>{дата, время}</b></p>
+<a href="#" class="time_info-close"></a>
 </blockquote>
+                <div class="entry">
+		<h1>Заявка </h1>
+
+
+<div class="cabinet">
+	<div class="cabinet-container">
+		<div class="cabinet-content">
 			<form method="post" class="validate">
 				<table border="0" width="100%" cellspacing="0" cellpadding="0" class='form-table'>
+                <thead>
 				<tr>
 					<th width="3%">№</th>
-					<th width="45%">Название</th>
-					<th width="">Значение</th>
-									</tr>
+					<th width="">Название</th>
+					<th width="30%">Значение</th>
+                </tr>
+                </thead>
+                <tbody>
 				<tr>
 					<td>1</td>
 					<td><label class="lab3">Заявка на участие в конкурсном отборе</label></td>
@@ -181,7 +188,7 @@
 							<input type="file" name="upl1"  multiple="multiple" />
 							<input type="hidden" class="" name="fname1" value="" />
 														<div class="fu_file" data-filename="Dokument.pdf"><div class="progress"></div><p class="file-link"><a href="/upload/iblock/4ec/Dokument.pdf" target="_blank">Dokument.pdf</a></p><span></span><input type="text" name="fu_ID_1[]" value="16417"></div>
-								
+
 						</div>
 					</td>
 				</tr>
@@ -218,7 +225,7 @@
 					<td>1.4.1</td>
 					<td><label class="lab3">- Решение об избрании, приказ о назначении на должность (об утверждении в должности) – для должностного лица, имеющего право действовать без доверенности (для подтверждения полномочий должностного лица, указанного в представленной выписке из Единого государственного реестра юридических лиц, представление соответствующих документов не требуется);</label></td>
 					<td>
-						<input type="checkbox" class="no-required-file" name="upl4_" checked> Не требуется
+						<input type="checkbox" class="no-required-file" name="upl4_" checked> <span>Не требуется</span>
 												<div class="upload" style="display:none">
 														<a>перенесите сюда файл</a>
 							<input type="file" name="upl4" />
@@ -230,7 +237,7 @@
 					<td>1.4.2</td>
 					<td><label class="lab3">- Доверенность , или ее заверенная копия в установленном законодательством Российской Федерации порядке – для всех остальных лиц в соответствии с определением инициатора создания центра.</label></td>
 					<td>
-						<input type="checkbox" class="no-required-file" name="upl5_" checked> Не требуется
+						<input type="checkbox" class="no-required-file" name="upl5_" checked> <span>Не требуется</span>
 												<div class="upload" style="display:none">
 														<a>перенесите сюда файл</a>
 							<input type="file" name="upl5" />
@@ -242,7 +249,7 @@
 					<td>2</td>
 					<td><label class="lab3">Согласие учредителя организации, на базе которой создан центр, либо учредителей участников центра на участие подведомственных им организаций в конкурсном отборе и последующее заключение организациями соглашения о предоставлении гранта – для бюджетных и автономных учреждений, не находящихся в ведении Министерства науки и высшего образования Российской Федерации или Правительства Российской Федерации</label></td>
 					<td>
-						<input type="checkbox" class="no-required-file" name="upl6_" checked> Не требуется
+						<input type="checkbox" class="no-required-file" name="upl6_" checked> <span>Не требуется</span>
 												<div class="upload" style="display:none">
 														<a>перенесите сюда файл</a>
 							<input type="file" name="upl6" />
@@ -258,8 +265,8 @@
 							<a>перенесите сюда файл</a>
 							<input type="file" name="upl7"  multiple="multiple" />
 							<input type="hidden" class="" name="fname7" value="" />
-														<div class="fu_file" data-filename="Dokument.pdf"><div class="progress"></div><p class="file-link"><a href="/upload/iblock/8e3/Dokument.pdf" target="_blank">Dokument.pdf</a></p><span></span><input type="text" name="fu_ID_7[]" value="16421"></div>
-								
+														<div class="fu_file" data-filename="Dokument.pdf"><div class="progress"></div><p class="file-link"><a href="/upload/iblock/8e3/Dokument.pdf" target="_blank">Dokument.pdf Копия соглашения о консорциуме</a></p><span></span><input type="text" name="fu_ID_7[]" value="16421"></div>
+
 						</div>
 					</td>
 									</tr>
@@ -267,7 +274,7 @@
 					<td>4</td>
 					<td><label class="lab3">Копия соглашения о консорциуме, заверенную руководителем организации – участника конкурсного отбора или иным уполномоченным лицом, в котором для каждого участника центра определен перечень мероприятий с указанием объемов финансового обеспечения из федерального бюджета и внебюджетных источников (документ представляется только при наличии консорциума)</label></td>
 					<td>
-						<input type="checkbox" class="no-required-file" name="upl8_" checked> Не требуется
+						<input type="checkbox" class="no-required-file" name="upl8_" checked> <span>Не требуется</span>
 												<div class="upload" style="display:none">
 														<a>перенесите сюда файл</a>
 							<input type="file" name="upl8" />
@@ -279,7 +286,7 @@
 					<td>5</td>
 					<td><label class="lab3">Другие документы на усмотрение инициатора создания центра</label></td>
 					<td>
-						<input type="checkbox" class="no-required-file" name="upl9_" checked> Не требуется
+						<input type="checkbox" class="no-required-file" name="upl9_" checked> <span>Не требуется</span>
 												<div class="upload upload-multiple" style="display:none">
 							<a>перенесите сюда файл</a>
 							<input type="file" name="upl9" multiple="multiple" />
@@ -287,6 +294,7 @@
 													</div>
 					</td>
 									</tr>
+                    </tbody>
 				</table>
 				<div class="form_sub">
 					<input class="btn btn_sm" type="submit" name="request" id="form-sub-save" value="Сохранить заявку" />
@@ -315,41 +323,41 @@
 <ul>
 
 
-	
-	
-            <li><a href="/centers/">Центры</a></li>    
-            
-	
 
-	
-	
-            <li><a href="/organizations/">Организации</a></li>    
-            
-	
 
-	
-	
-            <li><a href="/councils/">Советы</a></li>    
-            
-	
+            <li><a href="/centers/">Центры</a></li>
 
-	
-	
-            <li><a href="/results/">Результаты работы центров</a></li>    
-            
-	
 
-	
-	
-            <li><a href="/help/">Помощь</a></li>    
-            
-	
 
-	
-	
-            <li class="active"><a href="/personal/">Личные кабинеты</a></li>    
-            
-	
+
+
+            <li><a href="/organizations/">Организации</a></li>
+
+
+
+
+
+            <li><a href="/councils/">Советы</a></li>
+
+
+
+
+
+            <li><a href="/results/">Результаты работы центров</a></li>
+
+
+
+
+
+            <li><a href="/help/">Помощь</a></li>
+
+
+
+
+
+            <li class="active"><a href="/personal/">Личные кабинеты</a></li>
+
+
 
 
 </ul>
@@ -373,5 +381,6 @@
 
 
 <script type="text/javascript"  src="bitrix/cache/js/s2/ncmu/template_a038904fd9494746d35576cde26b940c/template_a038904fd9494746d35576cde26b940c_v1.js?1562151943476245"></script>
+<script src="new/js/scripts.js"></script>
 </body>
 </html>
