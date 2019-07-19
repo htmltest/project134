@@ -14,3 +14,13 @@ $(document).ready(function() {
     });
 
 });
+
+$(window).on('load resize scroll', function() {
+    $('.expert-request-score-window').each(function() {
+        if ($(window).scrollTop() > $('.expert-request-score-window').parents().filter('.entry').offset().top) {
+            $('.expert-request-score-window').addClass('visible');
+        } else {
+            $('.expert-request-score-window').removeClass('visible');
+        }
+    });
+});
