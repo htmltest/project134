@@ -19,6 +19,7 @@
     	<link rel="stylesheet" href="local/layout/css/style480.css" media="screen and (max-width: 759px)">
 
         <link rel="stylesheet" href="new/css/style.css" />
+        <link rel="stylesheet" href="new/js/mcustomscrollbar/jquery.mCustomScrollbar.css" />
 </head>
 <body>
 <div class="wrap_h wrap-cabinet"><div class="wrap_in">
@@ -154,293 +155,1106 @@
         </div>
     </div>
 </div>
-<div class="entry">
-		<h1>Оценки <br /><a href="pdf.php?id=2955" class="cabinet-docs-link">Выгрузить оценки в формате pdf</a></h1>
+<div class="entry riepp-score">
+		<h1>Оценки <div class="cabinet-expert-requests-score">11.35</div> <br /><a href="pdf.php?id=2955" class="cabinet-docs-link">Выгрузить оценки в формате pdf</a><a href="#" class="riepp-score-view-link"><svg width="16" height="10" viewBox="0 0 16 10" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M8 7.978C9.65685 7.978 11 6.63997 11 4.98942C11 3.33887 9.65685 2.00084 8 2.00084C6.34315 2.00084 5 3.33887 5 4.98942C5 6.63997 6.34315 7.978 8 7.978ZM0 4.98942C0 4.98942 2.99731 0 8 0C13.0027 0 16 4.98942 16 4.98942C16 4.98942 13.0144 10 8 10C2.9856 10 0 4.98942 0 4.98942ZM7 4.98942C7 4.4354 7.44771 3.99323 8 3.99323C8.55614 3.99323 9 4.43924 9 4.98942C9 5.54344 8.55229 5.98561 8 5.98561C7.44386 5.98561 7 5.5396 7 4.98942Z" /></svg><span class="riepp-score-view-link-text-1">Показать оценки членов совета (5 оценок)</span><span class="riepp-score-view-link-text-2">Свернуть оценки</span></a></h1>
 
 
 <div class="cabinet">
 	<div class="cabinet-container">
 		<div class="cabinet-content">
-			<table border="0" width="100%" cellspacing="0" cellpadding="0" class='form-table'>
-            <thead>
-				<tr>
-					<th width="3%">№п/п</th>
-					<th width="7%">Тип индикатора</th>
-					<th width="30%">Наименование группы критериев/критерия/показателя критерия</th>
-					<th width="10%">Весовое значение, %</th>
-					<th width="50%" colspan="3">Баллы членов совета</th>
-				</tr>
-                </thead>
-                <tbody>
-			<tr>
-			<td></td>
-			<td>Группа критериев</td>
-			<td>ОЦЕНКА НАУЧНОГО И ОБРАЗОВАТЕЛЬНОГО ЗАДЕЛА</td>
-			<td><span class="SUMM_v1"></span></td>
-			<td class="sovet">EXPERT_1</td><td class="sovet">EXPERT_3</td><td style="background-color:#ff9999">Итого:</td>			</tr>
-			<tr class="kriteriy s1">
-			<td>1</td>
-			<td>Критерий</td>
-			<td>Наличие опыта проведения исследований в области математических и смежных наук</td>
-			<td>10</td>
-			<td style="font-weight:bold;"><span class="SUMM1 EXPERT_1"></span></td><td style="font-weight:bold;"><span class="SUMM1 EXPERT_3"></span></td><td style="font-weight:bold;background-color:#ff9999"><span class="SUMM1_ALL"></span></td>			</tr>
-			<tr>
-			<td>1,1</td>
-			<td>Показатель критерия</td>
-			<td>Доля публикаций в области математических и смежных наук в изданиях первого и второго квартиля по базе данных Web of Science Core Collection или по базе данных Scopus от общего количества публикаций организации/организаций в области математических и смежных наук в журналах, индексируемых в базах данных Web of Science Core Collection или Scopus</td>
-			<td></td>
-			<td class="kr1 EXPERT_1">5</td><td class="kr1 EXPERT_3">1</td><td style="background-color:#ffdddd;"></td>			</tr>
-			<tr>
-			<td>1,2</td>
-			<td>Показатель критерия</td>
-			<td> Количество публикаций в организации/организациях  в области математических и смежных наук на одного исследователя в организации/организациях, осуществляющего исследования в области математических и смежных наук,в изданиях, индексируемых в базах данных Web of Science Core Collection, MathSciNet и Scopus</td>
-			<td></td>
-			<td class="kr1 EXPERT_1">5</td><td class="kr1 EXPERT_3">1</td><td style="background-color:#ffdddd;"></td>			</tr>
-			<tr>
-			<td>1,3</td>
-			<td>Показатель критерия</td>
-			<td>Цитируемость публикаций в области математических и смежных наук работников организации/организаций в журналах, индексируемых в базе данных Web of Science Core Collection</td>
-			<td></td>
-			<td class="kr1 EXPERT_1">5</td><td class="kr1 EXPERT_3">1</td><td style="background-color:#ffdddd;"></td>			</tr>
-			<tr>
-			<td>1,4</td>
-			<td>Показатель критерия</td>
-			<td>Количество научных журналов (учрежденных/издаваемых) в области математических и смежных наук</td>
-			<td></td>
-			<td class="kr1 EXPERT_1">5</td><td class="kr1 EXPERT_3">1</td><td style="background-color:#ffdddd;"></td>			</tr>
-			<tr>
-			<td>1,5</td>
-			<td>Показатель критерия</td>
-			<td>Количество диссертационных советов в области математических и смежных наук и/или наличие права у организации/организаций проводить защиты диссертации по собственным правилам
-			</td>
-			<td></td>
-			<td class="kr1 EXPERT_1">5</td><td class="kr1 EXPERT_3">1</td><td style="background-color:#ffdddd;"></td>			</tr>
-			<tr>
-			<td>1,6</td>
-			<td>Показатель критерия</td>
-			<td>Количество защищенных работниками организации/организаций диссертаций в области математических и смежных наук на соискание ученой степени кандидата и доктора наук
-			</td>
-			<td></td>
-			<td class="kr1 EXPERT_1">5</td><td class="kr1 EXPERT_3">1</td><td style="background-color:#ffdddd;"></td>			</tr>
-			<tr>
-			<td>1,7</td>
-			<td>Показатель критерия</td>
-			<td>Количество проектов в области математических и смежных наук, в реализации которых принимает участие организация/организации
-			</td>
-			<td></td>
-			<td class="kr1 EXPERT_1">5</td><td class="kr1 EXPERT_3">1</td><td style="background-color:#ffdddd;"></td>			</tr>
-			<tr>
-			<td>1,8</td>
-			<td>Показатель критерия</td>
-			<td>Количество договоров на проведение исследований с индустриальными партнерами в области математических и смежных наук
-			</td>
-			<td></td>
-			<td class="kr1 EXPERT_1">5</td><td class="kr1 EXPERT_3">1</td><td style="background-color:#ffdddd;"></td>			</tr>
-			<tr>
-			<td>1,9</td>
-			<td>Показатель критерия</td>
-			<td>
-			Доля исследователей, работающих в области математических и смежных наук на условиях полной занятости в организации/организациях, имеющих индекс Хирша не менее 10 или процитированных не менее чем в 30 публикациях (значения индекса Хирша и количества цитирующих публикаций определяются по базе данных Web of Science Core Collection)
-			</td>
-			<td></td>
-			<td class="kr1 EXPERT_1">5</td><td class="kr1 EXPERT_3">1</td><td style="background-color:#ffdddd;"></td>			</tr>
-			<tr>
-			<td>1,10</td>
-			<td>Показатель критерия</td>
-			<td>Количество иностранных исследователей, принятых на работу в организацию/организации в области математических и смежных наук
-			</td>
-			<td></td>
-			<td class="kr1 EXPERT_1">5</td><td class="kr1 EXPERT_3">1</td><td style="background-color:#ffdddd;"></td>			</tr>
 
-			<tr class="kriteriy s1">
-			<td>2</td>
-			<td>Критерий</td>
-			<td>Интегрированность организации в международную научную деятельность
-			</td>
-			<td>15</td>
-			<td style="font-weight:bold;"><span class="SUMM2 EXPERT_1"></span></td><td style="font-weight:bold;"><span class="SUMM2 EXPERT_3"></span></td><td style="font-weight:bold;background-color:#ff9999"><span class="SUMM2_ALL"></span></td>			</tr>
+            <script type="text/javascript">
+                var scores = {
+                                "groups"    : [
+                                    {
+                                        "title"         : "Группа критериев",
+                                        "name"          : "Оценка научного и образовательного задела",
+                                        "weight"        : "40",
+                                        "criterions"    : [
+                                            {
+                                                "number"    : "1",
+                                                "title"     : "Критерий",
+                                                "name"      : "Наличие опыта проведения исследований в области математических и смежных наук",
+                                                "weight"    : "10",
+                                                "scores"    : [
+                                                    {
+                                                        "user"  : "Иванов Иван Иванович",
+                                                        "score" : "2.30"
+                                                    },
+                                                    {
+                                                        "user"  : "Иванов Иван Иванович",
+                                                        "score" : "2.30"
+                                                    },
+                                                    {
+                                                        "user"  : "Иванов Иван Иванович",
+                                                        "score" : "2.30"
+                                                    },
+                                                    {
+                                                        "user"  : "Константин Константинович Константинов",
+                                                        "score" : "2.30"
+                                                    },
+                                                    {
+                                                        "user"  : "Иванов Иван Иванович",
+                                                        "score" : "2.30"
+                                                    }
+                                                ],
+                                                "summ"      : "2.30",
+                                                "items"     : [
+                                                    {
+                                                        "number"    : "1.1",
+                                                        "title"     : "Доля публикаций в области математических и смежных наук в изданиях первого и второго квартиля по базе данных Web of Science Core Collection или по базе данных Scopus от общего количества публикаций организации/организаций в области математических и смежных наук в журналах, индексируемых в базах данных Web of Science Core Collection или Scopus",
+                                                        "scores"    : [
+                                                            {
+                                                                "user"  : "Иванов Иван Иванович",
+                                                                "score" : "2.30"
+                                                            },
+                                                            {
+                                                                "user"  : "Иванов Иван Иванович",
+                                                                "score" : "2.30"
+                                                            },
+                                                            {
+                                                                "user"  : "Иванов Иван Иванович",
+                                                                "score" : "2.30"
+                                                            },
+                                                            {
+                                                                "user"  : "Константин Константинович Константинов",
+                                                                "score" : "2.30"
+                                                            },
+                                                            {
+                                                                "user"  : "Иванов Иван Иванович",
+                                                                "score" : "2.30"
+                                                            }
+                                                        ],
+                                                        "summ"      : "2.30"
+                                                    },
 
-			<tr>
-			<td>2,1</td>
-			<td>Показатель критерия</td>
-			<td>Количество международных математических конференций и конгрессов, на которые были приглашены сотрудники организации/организаций для доклада</td>
-			<td></td>
-			<td class="kr2 EXPERT_1">0</td><td class="kr2 EXPERT_3">1</td><td style="background-color:#ffdddd;"></td>			</tr>
-			<tr>
-			<td>2,2</td>
-			<td>Показатель критерия</td>
-			<td>Количество международных математических конференций, организованных и проведенных организацией/организациями</td>
-			<td></td>
-			<td class="kr2 EXPERT_1">1</td><td class="kr2 EXPERT_3">1</td><td style="background-color:#ffdddd;"></td>			</tr>
-			<tr>
-			<td>2,3</td>
-			<td>Показатель критерия</td>
-			<td>Количество публикаций сотрудников организации/организаций совместно с зарубежными учеными в области математических и смежных наук в журналах, индексируемых в базе данных Web of Science Core Collection </td>
-			<td></td>
-			<td class="kr2 EXPERT_1">1</td><td class="kr2 EXPERT_3">1</td><td style="background-color:#ffdddd;"></td>			</tr>
-			<tr>
-			<td>2,4</td>
-			<td>Показатель критерия</td>
-			<td>Количество результатов интеллектуальной деятельности в области математических и смежных наук, полученных совместно с зарубежными партнерами</td>
-			<td></td>
-			<td class="kr2 EXPERT_1">1</td><td class="kr2 EXPERT_3">1</td><td style="background-color:#ffdddd;"></td>			</tr>
-			<tr>
-			<td>2,5</td>
-			<td>Показатель критерия</td>
-			<td>Количество членов редколлегий зарубежных журналов в области математики и смежных наук из числа сотрудников организации/организаций</td>
-			<td></td>
-			<td class="kr2 EXPERT_1">1</td><td class="kr2 EXPERT_3">1</td><td style="background-color:#ffdddd;"></td>			</tr>
+                                                    {
+                                                        "number"    : "1.2",
+                                                        "title"     : "Количество публикаций в организации/организациях в области математических и смежных наук на одного исследователя в организации/организациях, осуществляющего исследования в области математических и смежных наук,в изданиях, индексируемых в базах данных Web of Science Core Collection, MathSciNet и Scopus",
+                                                        "scores"    : [
+                                                            {
+                                                                "user"  : "Иванов Иван Иванович",
+                                                                "score" : "2.30"
+                                                            },
+                                                            {
+                                                                "user"  : "Иванов Иван Иванович",
+                                                                "score" : "2.30"
+                                                            },
+                                                            {
+                                                                "user"  : "Иванов Иван Иванович",
+                                                                "score" : "2.30"
+                                                            },
+                                                            {
+                                                                "user"  : "Константин Константинович Константинов",
+                                                                "score" : "2.30"
+                                                            },
+                                                            {
+                                                                "user"  : "Иванов Иван Иванович",
+                                                                "score" : "2.30"
+                                                            }
+                                                        ],
+                                                        "summ"      : "2.30"
+                                                    },
 
-			<tr class="kriteriy s1">
-			<td>3</td>
-			<td>Критерий</td>
-			<td>Наличие опыта реализации образовательных и (или) научно-технических программ с участием молодых исследователей и обучающихся
-			</td>
-			<td>15</td>
-			<td style="font-weight:bold;"><span class="SUMM3 EXPERT_1"></span></td><td style="font-weight:bold;"><span class="SUMM3 EXPERT_3"></span></td><td style="font-weight:bold;background-color:#ff9999"><span class="SUMM3_ALL"></span></td>			</tr>
+                                                    {
+                                                        "number"    : "1.3",
+                                                        "title"     : "Цитируемость публикаций в области математических и смежных наук работников организации/организаций в журналах, индексируемых в базе данных Web of Science Core Collection",
+                                                        "scores"    : [
+                                                            {
+                                                                "user"  : "Иванов Иван Иванович",
+                                                                "score" : "2.30"
+                                                            },
+                                                            {
+                                                                "user"  : "Иванов Иван Иванович",
+                                                                "score" : "2.30"
+                                                            },
+                                                            {
+                                                                "user"  : "Иванов Иван Иванович",
+                                                                "score" : "2.30"
+                                                            },
+                                                            {
+                                                                "user"  : "Константин Константинович Константинов",
+                                                                "score" : "2.30"
+                                                            },
+                                                            {
+                                                                "user"  : "Иванов Иван Иванович",
+                                                                "score" : "2.30"
+                                                            }
+                                                        ],
+                                                        "summ"      : "2.30"
+                                                    },
 
-			<tr>
-			<td>3,1</td>
-			<td>Показатель критерия</td>
-			<td>Количество базовых кафедр других организаций или в других организациях</td>
-			<td></td>
-			<td class="kr3 EXPERT_1">1</td><td class="kr3 EXPERT_3">1</td><td style="background-color:#ffdddd;"></td>			</tr>
-			<tr>
-			<td>3,2</td>
-			<td>Показатель критерия</td>
-			<td>Уровень реализуемых образовательных программ научных и (или) научно-технических программ с участием молодых исследователей и обучающихся</td>
-			<td></td>
-			<td class="kr3 EXPERT_1">1</td><td class="kr3 EXPERT_3">1</td><td style="background-color:#ffdddd;"></td>			</tr>
+                                                    {
+                                                        "number"    : "1.4",
+                                                        "title"     : "Количество научных журналов (учрежденных/издаваемых) в области математических и смежных наук",
+                                                        "scores"    : [
+                                                            {
+                                                                "user"  : "Иванов Иван Иванович",
+                                                                "score" : "2.30"
+                                                            },
+                                                            {
+                                                                "user"  : "Иванов Иван Иванович",
+                                                                "score" : "2.30"
+                                                            },
+                                                            {
+                                                                "user"  : "Иванов Иван Иванович",
+                                                                "score" : "2.30"
+                                                            },
+                                                            {
+                                                                "user"  : "Константин Константинович Константинов",
+                                                                "score" : "2.30"
+                                                            },
+                                                            {
+                                                                "user"  : "Иванов Иван Иванович",
+                                                                "score" : "2.30"
+                                                            }
+                                                        ],
+                                                        "summ"      : "2.30"
+                                                    },
 
-			<tr>
-			<td></td>
-			<td>Группа критериев</td>
-			<td>ОЦЕНКА ПЛАНИРУЕМЫХ РЕЗУЛЬТАТОВ ДЕЯТЕЛЬНОСТИ ЦЕНТРА</td>
-			<td><span class="SUMM_v2"></span></td>
-			<td></td><td></td>			<td style="background-color:#ffdddd;"></td>
-			</tr>
+                                                    {
+                                                        "number"    : "1.5",
+                                                        "title"     : "Количество диссертационных советов в области математических и смежных наук и/или наличие права у организации/организаций проводить защиты диссертации по собственным правилам",
+                                                        "scores"    : [
+                                                            {
+                                                                "user"  : "Иванов Иван Иванович",
+                                                                "score" : "2.30"
+                                                            },
+                                                            {
+                                                                "user"  : "Иванов Иван Иванович",
+                                                                "score" : "2.30"
+                                                            },
+                                                            {
+                                                                "user"  : "Иванов Иван Иванович",
+                                                                "score" : "2.30"
+                                                            },
+                                                            {
+                                                                "user"  : "Константин Константинович Константинов",
+                                                                "score" : "2.30"
+                                                            },
+                                                            {
+                                                                "user"  : "Иванов Иван Иванович",
+                                                                "score" : "2.30"
+                                                            }
+                                                        ],
+                                                        "summ"      : "2.30"
+                                                    },
 
+                                                    {
+                                                        "number"    : "1.6",
+                                                        "title"     : "Количество защищенных работниками организации/организаций диссертаций в области математических и смежных наук на соискание ученой степени кандидата и доктора наук",
+                                                        "scores"    : [
+                                                            {
+                                                                "user"  : "Иванов Иван Иванович",
+                                                                "score" : "2.30"
+                                                            },
+                                                            {
+                                                                "user"  : "Иванов Иван Иванович",
+                                                                "score" : "2.30"
+                                                            },
+                                                            {
+                                                                "user"  : "Иванов Иван Иванович",
+                                                                "score" : "2.30"
+                                                            },
+                                                            {
+                                                                "user"  : "Константин Константинович Константинов",
+                                                                "score" : "2.30"
+                                                            },
+                                                            {
+                                                                "user"  : "Иванов Иван Иванович",
+                                                                "score" : "2.30"
+                                                            }
+                                                        ],
+                                                        "summ"      : "2.30"
+                                                    },
 
-			<tr class="kriteriy s2">
-			<td>4</td>
-			<td>Критерий</td>
-			<td>Развитие центра
-			</td>
-			<td>15</td>
-			<td style="font-weight:bold;"><span class="SUMM4 EXPERT_1"></span></td><td style="font-weight:bold;"><span class="SUMM4 EXPERT_3"></span></td><td style="font-weight:bold;background-color:#ff9999"><span class="SUMM4_ALL"></span></td>			</tr>
+                                                    {
+                                                        "number"    : "1.7",
+                                                        "title"     : "Количество проектов в области математических и смежных наук, в реализации которых принимает участие организация/организации",
+                                                        "scores"    : [
+                                                            {
+                                                                "user"  : "Иванов Иван Иванович",
+                                                                "score" : "2.30"
+                                                            },
+                                                            {
+                                                                "user"  : "Иванов Иван Иванович",
+                                                                "score" : "2.30"
+                                                            },
+                                                            {
+                                                                "user"  : "Иванов Иван Иванович",
+                                                                "score" : "2.30"
+                                                            },
+                                                            {
+                                                                "user"  : "Константин Константинович Константинов",
+                                                                "score" : "2.30"
+                                                            },
+                                                            {
+                                                                "user"  : "Иванов Иван Иванович",
+                                                                "score" : "2.30"
+                                                            }
+                                                        ],
+                                                        "summ"      : "2.30"
+                                                    },
 
-			<tr>
-			<td>4,1</td>
-			<td>Показатель критерия</td>
-			<td>Оценка развития центра на основе планируемых целевых показателей деятельности центра</td>
-			<td></td>
-			<td class="kr4 EXPERT_1">3</td><td class="kr4 EXPERT_3">1</td><td style="background-color:#ffdddd;"></td>			</tr>
+                                                    {
+                                                        "number"    : "1.8",
+                                                        "title"     : "Количество договоров на проведение исследований с индустриальными партнерами в области математических и смежных наук",
+                                                        "scores"    : [
+                                                            {
+                                                                "user"  : "Иванов Иван Иванович",
+                                                                "score" : "2.30"
+                                                            },
+                                                            {
+                                                                "user"  : "Иванов Иван Иванович",
+                                                                "score" : "2.30"
+                                                            },
+                                                            {
+                                                                "user"  : "Иванов Иван Иванович",
+                                                                "score" : "2.30"
+                                                            },
+                                                            {
+                                                                "user"  : "Константин Константинович Константинов",
+                                                                "score" : "2.30"
+                                                            },
+                                                            {
+                                                                "user"  : "Иванов Иван Иванович",
+                                                                "score" : "2.30"
+                                                            }
+                                                        ],
+                                                        "summ"      : "2.30"
+                                                    },
 
-			<tr class="kriteriy s2">
-			<td>5</td>
-			<td>Критерий</td>
-			<td>Программа научных исследований
-			</td>
-			<td>20</td>
-			<td style="font-weight:bold;"><span class="SUMM5 EXPERT_1"></span></td><td style="font-weight:bold;"><span class="SUMM5 EXPERT_3"></span></td><td style="font-weight:bold;background-color:#ff9999"><span class="SUMM5_ALL"></span></td>			</tr>
+                                                    {
+                                                        "number"    : "1.9",
+                                                        "title"     : "Доля исследователей, работающих в области математических и смежных наук на условиях полной занятости в организации/организациях, имеющих индекс Хирша не менее 10 или процитированных не менее чем в 30 публикациях (значения индекса Хирша и количества цитирующих публикаций определяются по базе данных Web of Science Core Collection)",
+                                                        "scores"    : [
+                                                            {
+                                                                "user"  : "Иванов Иван Иванович",
+                                                                "score" : "2.30"
+                                                            },
+                                                            {
+                                                                "user"  : "Иванов Иван Иванович",
+                                                                "score" : "2.30"
+                                                            },
+                                                            {
+                                                                "user"  : "Иванов Иван Иванович",
+                                                                "score" : "2.30"
+                                                            },
+                                                            {
+                                                                "user"  : "Константин Константинович Константинов",
+                                                                "score" : "2.30"
+                                                            },
+                                                            {
+                                                                "user"  : "Иванов Иван Иванович",
+                                                                "score" : "2.30"
+                                                            }
+                                                        ],
+                                                        "summ"      : "2.30"
+                                                    },
 
-			<tr>
-			<td>5,1</td>
-			<td>Показатель критерия</td>
-			<td>Оценка актуальности и значимости планируемых научных исследований</td>
-			<td></td>
-			<td class="kr5 EXPERT_1">1</td><td class="kr5 EXPERT_3">1</td><td style="background-color:#ffdddd;"></td>			</tr>
-			<tr>
-			<td>5,2</td>
-			<td>Показатель критерия</td>
-			<td>Оценка соответствия предложенной программы научных исследований трендам и уровню развития в области математических и смежных наук</td>
-			<td></td>
-			<td class="kr5 EXPERT_1">1</td><td class="kr5 EXPERT_3">1</td><td style="background-color:#ffdddd;"></td>			</tr>
-			<tr>
-			<td>5,3</td>
-			<td>Показатель критерия</td>
-			<td>Оценка планов по публикационной активности работников центра</td>
-			<td></td>
-			<td class="kr5 EXPERT_1">1</td><td class="kr5 EXPERT_3">1</td><td style="background-color:#ffdddd;"></td>			</tr>
-			<tr>
-			<td>5,4</td>
-			<td>Показатель критерия</td>
-			<td>Оценка планов центра по сотрудничеству с научно-исследовательскими организациями Российской Федерации</td>
-			<td></td>
-			<td class="kr5 EXPERT_1">1</td><td class="kr5 EXPERT_3">1</td><td style="background-color:#ffdddd;"></td>			</tr>
-			<tr>
-			<td>5,5</td>
-			<td>Показатель критерия</td>
-			<td>Оценка планов центра по сотрудничеству с зарубежными научно-исследовательскими организациями</td>
-			<td></td>
-			<td class="kr5 EXPERT_1">1</td><td class="kr5 EXPERT_3">1</td><td style="background-color:#ffdddd;"></td>			</tr>
+                                                    {
+                                                        "number"    : "1.10",
+                                                        "title"     : "Количество иностранных исследователей, принятых на работу в организацию/организации в области математических и смежных наук",
+                                                        "scores"    : [
+                                                            {
+                                                                "user"  : "Иванов Иван Иванович",
+                                                                "score" : "2.30"
+                                                            },
+                                                            {
+                                                                "user"  : "Иванов Иван Иванович",
+                                                                "score" : "2.30"
+                                                            },
+                                                            {
+                                                                "user"  : "Иванов Иван Иванович",
+                                                                "score" : "2.30"
+                                                            },
+                                                            {
+                                                                "user"  : "Константин Константинович Константинов",
+                                                                "score" : "2.30"
+                                                            },
+                                                            {
+                                                                "user"  : "Иванов Иван Иванович",
+                                                                "score" : "2.30"
+                                                            }
+                                                        ],
+                                                        "summ"      : "2.30"
+                                                    }
+                                                ]
+                                            },
 
-			<tr class="kriteriy s2">
-			<td>6</td>
-			<td>Критерий</td>
-			<td>Кадровый потенциал
-			</td>
-			<td>15</td>
-			<td style="font-weight:bold;"><span class="SUMM6 EXPERT_1"></span></td><td style="font-weight:bold;"><span class="SUMM6 EXPERT_3"></span></td><td style="font-weight:bold;background-color:#ff9999"><span class="SUMM6_ALL"></span></td>			</tr>
+                                            {
+                                                "number"    : "2",
+                                                "title"     : "Критерий",
+                                                "name"      : "Интегрированность организации в международную научную деятельность",
+                                                "weight"    : "15",
+                                                "scores"    : [
+                                                    {
+                                                        "user"  : "Иванов Иван Иванович",
+                                                        "score" : "2.30"
+                                                    },
+                                                    {
+                                                        "user"  : "Иванов Иван Иванович",
+                                                        "score" : "2.30"
+                                                    },
+                                                    {
+                                                        "user"  : "Иванов Иван Иванович",
+                                                        "score" : "2.30"
+                                                    },
+                                                    {
+                                                        "user"  : "Константин Константинович Константинов",
+                                                        "score" : "2.30"
+                                                    },
+                                                    {
+                                                        "user"  : "Иванов Иван Иванович",
+                                                        "score" : "2.30"
+                                                    }
+                                                ],
+                                                "summ"      : "2.30",
+                                                "items"     : [
+                                                    {
+                                                        "number"    : "2.1",
+                                                        "title"     : "Количество международных математических конференций и конгрессов, на которые были приглашены сотрудники организации/организаций для доклада",
+                                                        "scores"    : [
+                                                            {
+                                                                "user"  : "Иванов Иван Иванович",
+                                                                "score" : "2.30"
+                                                            },
+                                                            {
+                                                                "user"  : "Иванов Иван Иванович",
+                                                                "score" : "2.30"
+                                                            },
+                                                            {
+                                                                "user"  : "Иванов Иван Иванович",
+                                                                "score" : "2.30"
+                                                            },
+                                                            {
+                                                                "user"  : "Константин Константинович Константинов",
+                                                                "score" : "2.30"
+                                                            },
+                                                            {
+                                                                "user"  : "Иванов Иван Иванович",
+                                                                "score" : "2.30"
+                                                            }
+                                                        ],
+                                                        "summ"      : "2.30"
+                                                    },
 
-			<tr>
-			<td>6,1</td>
-			<td>Показатель критерия</td>
-			<td>
-			Оценка плана разработки и внедрения в центре новых образовательных программ и (или) исследовательских программ центра, в том числе международных тематических программ (при необходимости), срок реализации которых от 1 месяца до года
-			</td>
-			<td></td>
-			<td class="kr6 EXPERT_1">4</td><td class="kr6 EXPERT_3">1</td><td style="background-color:#ffdddd;"></td>			</tr>
-			<tr>
-			<td>6,2</td>
-			<td>Показатель критерия</td>
-			<td>Оценка планов проведения центром конференций и мастер-классов, иных мероприятий, в том числе международных</td>
-			<td></td>
-			<td class="kr6 EXPERT_1">4</td><td class="kr6 EXPERT_3">1</td><td style="background-color:#ffdddd;"></td>			</tr>
-			<tr>
-			<td>6,3</td>
-			<td>Показатель критерия</td>
-			<td>Оценка планов центра по привлечению и закреплению ведущих ученых<a title="[1] Оценка проводится на основе формы «Сведения о формах привлечения к деятельности центра научных кадров, в том числе иностранных» Программы">[1]</a></td>
-			<td></td>
-			<td class="kr6 EXPERT_1">4</td><td class="kr6 EXPERT_3">1</td><td style="background-color:#ffdddd;"></td>			</tr>
-			<tr>
-			<td>6,4</td>
-			<td>Показатель критерия</td>
-			<td>Оценка планов центра по привлечению и закреплению перспективных молодых исследователей<a title="[2] Оценка проводится на основе формы «Сведения о формах привлечения к деятельности центра научных кадров, в том числе иностранных» Программы
-			">[2]</a></td>
-			<td></td>
-			<td class="kr6 EXPERT_1">4</td><td class="kr6 EXPERT_3">1</td><td style="background-color:#ffdddd;"></td>			</tr>
+                                                    {
+                                                        "number"    : "2.2",
+                                                        "title"     : "Количество международных математических конференций, организованных и проведенных организацией/организациями",
+                                                        "scores"    : [
+                                                            {
+                                                                "user"  : "Иванов Иван Иванович",
+                                                                "score" : "2.30"
+                                                            },
+                                                            {
+                                                                "user"  : "Иванов Иван Иванович",
+                                                                "score" : "2.30"
+                                                            },
+                                                            {
+                                                                "user"  : "Иванов Иван Иванович",
+                                                                "score" : "2.30"
+                                                            },
+                                                            {
+                                                                "user"  : "Константин Константинович Константинов",
+                                                                "score" : "2.30"
+                                                            },
+                                                            {
+                                                                "user"  : "Иванов Иван Иванович",
+                                                                "score" : "2.30"
+                                                            }
+                                                        ],
+                                                        "summ"      : "2.30"
+                                                    },
 
-			<tr class="kriteriy s2">
-			<td>7</td>
-			<td>Критерий</td>
-			<td>Вклад программы в достижение целевых показателей и индикаторов национального проекта «Наука»
-			</td>
-			<td>10</td>
-			<td style="font-weight:bold;"><span class="SUMM7 EXPERT_1"></span></td><td style="font-weight:bold;"><span class="SUMM7 EXPERT_3"></span></td><td style="font-weight:bold;background-color:#ff9999"><span class="SUMM7_ALL"></span></td>			</tr>
+                                                    {
+                                                        "number"    : "2.3",
+                                                        "title"     : "Количество публикаций сотрудников организации/организаций совместно с зарубежными учеными в области математических и смежных наук в журналах, индексируемых в базе данных Web of Science Core Collection",
+                                                        "scores"    : [
+                                                            {
+                                                                "user"  : "Иванов Иван Иванович",
+                                                                "score" : "2.30"
+                                                            },
+                                                            {
+                                                                "user"  : "Иванов Иван Иванович",
+                                                                "score" : "2.30"
+                                                            },
+                                                            {
+                                                                "user"  : "Иванов Иван Иванович",
+                                                                "score" : "2.30"
+                                                            },
+                                                            {
+                                                                "user"  : "Константин Константинович Константинов",
+                                                                "score" : "2.30"
+                                                            },
+                                                            {
+                                                                "user"  : "Иванов Иван Иванович",
+                                                                "score" : "2.30"
+                                                            }
+                                                        ],
+                                                        "summ"      : "2.30"
+                                                    },
 
-			<tr>
-			<td>7,1</td>
-			<td>Показатель критерия</td>
-			<td>Оценка соответствия предлагаемых научных исследований целям и задачам национального проекта «Наука»</td>
-			<td></td>
-			<td class="kr7 EXPERT_1">3</td><td class="kr7 EXPERT_3">1</td><td style="background-color:#ffdddd;"></td>			</tr>
+                                                    {
+                                                        "number"    : "2.4",
+                                                        "title"     : "Количество результатов интеллектуальной деятельности в области математических и смежных наук, полученных совместно с зарубежными партнерами",
+                                                        "scores"    : [
+                                                            {
+                                                                "user"  : "Иванов Иван Иванович",
+                                                                "score" : "2.30"
+                                                            },
+                                                            {
+                                                                "user"  : "Иванов Иван Иванович",
+                                                                "score" : "2.30"
+                                                            },
+                                                            {
+                                                                "user"  : "Иванов Иван Иванович",
+                                                                "score" : "2.30"
+                                                            },
+                                                            {
+                                                                "user"  : "Константин Константинович Константинов",
+                                                                "score" : "2.30"
+                                                            },
+                                                            {
+                                                                "user"  : "Иванов Иван Иванович",
+                                                                "score" : "2.30"
+                                                            }
+                                                        ],
+                                                        "summ"      : "2.30"
+                                                    },
 
-			<tr>
-			<td>7,2</td>
-			<td>Показатель критерия</td>
-			<td>Оценка планируемого вклада в достижение целевых показателей национального проекта «Наука» (на конец 2024 года)</td>
-			<td></td>
-			<td class="kr7 EXPERT_1">1</td><td class="kr7 EXPERT_3">1</td><td style="background-color:#ffdddd;"></td>			</tr>
+                                                    {
+                                                        "number"    : "2.5",
+                                                        "title"     : "Количество членов редколлегий зарубежных журналов в области математики и смежных наук из числа сотрудников организации/организаций",
+                                                        "scores"    : [
+                                                            {
+                                                                "user"  : "Иванов Иван Иванович",
+                                                                "score" : "2.30"
+                                                            },
+                                                            {
+                                                                "user"  : "Иванов Иван Иванович",
+                                                                "score" : "2.30"
+                                                            },
+                                                            {
+                                                                "user"  : "Иванов Иван Иванович",
+                                                                "score" : "2.30"
+                                                            },
+                                                            {
+                                                                "user"  : "Константин Константинович Константинов",
+                                                                "score" : "2.30"
+                                                            },
+                                                            {
+                                                                "user"  : "Иванов Иван Иванович",
+                                                                "score" : "2.30"
+                                                            }
+                                                        ],
+                                                        "summ"      : "2.30"
+                                                    }
+                                                ]
+                                            },
 
-			<tr style="font-weight:bold;">
-			<td>Итого</td>
-			<td></td>
-			<td></td>
-			<td><span class="SUMM_B_ALL"></span></td>
-			<td><span class="SUMM_ALL EXPERT_1"></span></td><td><span class="SUMM_ALL EXPERT_3"></span></td><td style="background-color:#ff9999"><span class="SUMM_ALL_ALL"></span></td>			</tr>
-            <tbody>
-			</table>
+                                            {
+                                                "number"    : "3",
+                                                "title"     : "Критерий",
+                                                "name"      : "Наличие опыта реализации образовательных и (или) научно-технических программ с участием молодых исследователей и обучающихся",
+                                                "weight"    : "15",
+                                                "scores"    : [
+                                                    {
+                                                        "user"  : "Иванов Иван Иванович",
+                                                        "score" : "2.30"
+                                                    },
+                                                    {
+                                                        "user"  : "Иванов Иван Иванович",
+                                                        "score" : "2.30"
+                                                    },
+                                                    {
+                                                        "user"  : "Иванов Иван Иванович",
+                                                        "score" : "2.30"
+                                                    },
+                                                    {
+                                                        "user"  : "Константин Константинович Константинов",
+                                                        "score" : "2.30"
+                                                    },
+                                                    {
+                                                        "user"  : "Иванов Иван Иванович",
+                                                        "score" : "2.30"
+                                                    }
+                                                ],
+                                                "summ"      : "2.30",
+                                                "items"     : [
+                                                    {
+                                                        "number"    : "3.1",
+                                                        "title"     : "Количество базовых кафедр других организаций или в других организациях",
+                                                        "scores"    : [
+                                                            {
+                                                                "user"  : "Иванов Иван Иванович",
+                                                                "score" : "2.30"
+                                                            },
+                                                            {
+                                                                "user"  : "Иванов Иван Иванович",
+                                                                "score" : "2.30"
+                                                            },
+                                                            {
+                                                                "user"  : "Иванов Иван Иванович",
+                                                                "score" : "2.30"
+                                                            },
+                                                            {
+                                                                "user"  : "Константин Константинович Константинов",
+                                                                "score" : "2.30"
+                                                            },
+                                                            {
+                                                                "user"  : "Иванов Иван Иванович",
+                                                                "score" : "2.30"
+                                                            }
+                                                        ],
+                                                        "summ"      : "2.30"
+                                                    },
+
+                                                    {
+                                                        "number"    : "3.2",
+                                                        "title"     : "Уровень реализуемых образовательных программ научных и (или) научно-технических программ с участием молодых исследователей и обучающихся",
+                                                        "scores"    : [
+                                                            {
+                                                                "user"  : "Иванов Иван Иванович",
+                                                                "score" : "2.30"
+                                                            },
+                                                            {
+                                                                "user"  : "Иванов Иван Иванович",
+                                                                "score" : "2.30"
+                                                            },
+                                                            {
+                                                                "user"  : "Иванов Иван Иванович",
+                                                                "score" : "2.30"
+                                                            },
+                                                            {
+                                                                "user"  : "Константин Константинович Константинов",
+                                                                "score" : "2.30"
+                                                            },
+                                                            {
+                                                                "user"  : "Иванов Иван Иванович",
+                                                                "score" : "2.30"
+                                                            }
+                                                        ],
+                                                        "summ"      : "2.30"
+                                                    }
+                                                ]
+                                            }
+                                        ]
+                                    },
+
+                                    {
+                                        "title"         : "Группа критериев",
+                                        "name"          : "Оценка планируемых результатов деятельности центра",
+                                        "weight"        : "60",
+                                        "criterions"    : [
+                                            {
+                                                "number"    : "4",
+                                                "title"     : "Критерий",
+                                                "name"      : "Развитие центра",
+                                                "weight"    : "15",
+                                                "scores"    : [
+                                                    {
+                                                        "user"  : "Иванов Иван Иванович",
+                                                        "score" : "2.30"
+                                                    },
+                                                    {
+                                                        "user"  : "Иванов Иван Иванович",
+                                                        "score" : "2.30"
+                                                    },
+                                                    {
+                                                        "user"  : "Иванов Иван Иванович",
+                                                        "score" : "2.30"
+                                                    },
+                                                    {
+                                                        "user"  : "Константин Константинович Константинов",
+                                                        "score" : "2.30"
+                                                    },
+                                                    {
+                                                        "user"  : "Иванов Иван Иванович",
+                                                        "score" : "2.30"
+                                                    }
+                                                ],
+                                                "summ"      : "2.30",
+                                                "items"     : [
+                                                    {
+                                                        "number"    : "4.1",
+                                                        "title"     : "Оценка развития центра на основе планируемых целевых показателей деятельности центра",
+                                                        "scores"    : [
+                                                            {
+                                                                "user"  : "Иванов Иван Иванович",
+                                                                "score" : "2.30"
+                                                            },
+                                                            {
+                                                                "user"  : "Иванов Иван Иванович",
+                                                                "score" : "2.30"
+                                                            },
+                                                            {
+                                                                "user"  : "Иванов Иван Иванович",
+                                                                "score" : "2.30"
+                                                            },
+                                                            {
+                                                                "user"  : "Константин Константинович Константинов",
+                                                                "score" : "2.30"
+                                                            },
+                                                            {
+                                                                "user"  : "Иванов Иван Иванович",
+                                                                "score" : "2.30"
+                                                            }
+                                                        ],
+                                                        "summ"      : "2.30"
+                                                    }
+                                                ]
+                                            },
+
+                                            {
+                                                "number"    : "5",
+                                                "title"     : "Критерий",
+                                                "name"      : "Программа научных исследований",
+                                                "weight"    : "20",
+                                                "scores"    : [
+                                                    {
+                                                        "user"  : "Иванов Иван Иванович",
+                                                        "score" : "2.30"
+                                                    },
+                                                    {
+                                                        "user"  : "Иванов Иван Иванович",
+                                                        "score" : "2.30"
+                                                    },
+                                                    {
+                                                        "user"  : "Иванов Иван Иванович",
+                                                        "score" : "2.30"
+                                                    },
+                                                    {
+                                                        "user"  : "Константин Константинович Константинов",
+                                                        "score" : "2.30"
+                                                    },
+                                                    {
+                                                        "user"  : "Иванов Иван Иванович",
+                                                        "score" : "2.30"
+                                                    }
+                                                ],
+                                                "summ"      : "2.30",
+                                                "items"     : [
+                                                    {
+                                                        "number"    : "5.1",
+                                                        "title"     : "Оценка актуальности и значимости планируемых научных исследований",
+                                                        "scores"    : [
+                                                            {
+                                                                "user"  : "Иванов Иван Иванович",
+                                                                "score" : "2.30"
+                                                            },
+                                                            {
+                                                                "user"  : "Иванов Иван Иванович",
+                                                                "score" : "2.30"
+                                                            },
+                                                            {
+                                                                "user"  : "Иванов Иван Иванович",
+                                                                "score" : "2.30"
+                                                            },
+                                                            {
+                                                                "user"  : "Константин Константинович Константинов",
+                                                                "score" : "2.30"
+                                                            },
+                                                            {
+                                                                "user"  : "Иванов Иван Иванович",
+                                                                "score" : "2.30"
+                                                            }
+                                                        ],
+                                                        "summ"      : "2.30"
+                                                    },
+
+                                                    {
+                                                        "number"    : "5.2",
+                                                        "title"     : "Оценка соответствия предложенной программы научных исследований трендам и уровню развития в области математических и смежных наук",
+                                                        "scores"    : [
+                                                            {
+                                                                "user"  : "Иванов Иван Иванович",
+                                                                "score" : "2.30"
+                                                            },
+                                                            {
+                                                                "user"  : "Иванов Иван Иванович",
+                                                                "score" : "2.30"
+                                                            },
+                                                            {
+                                                                "user"  : "Иванов Иван Иванович",
+                                                                "score" : "2.30"
+                                                            },
+                                                            {
+                                                                "user"  : "Константин Константинович Константинов",
+                                                                "score" : "2.30"
+                                                            },
+                                                            {
+                                                                "user"  : "Иванов Иван Иванович",
+                                                                "score" : "2.30"
+                                                            }
+                                                        ],
+                                                        "summ"      : "2.30"
+                                                    },
+
+                                                    {
+                                                        "number"    : "5.3",
+                                                        "title"     : "Оценка планов по публикационной активности работников центра",
+                                                        "scores"    : [
+                                                            {
+                                                                "user"  : "Иванов Иван Иванович",
+                                                                "score" : "2.30"
+                                                            },
+                                                            {
+                                                                "user"  : "Иванов Иван Иванович",
+                                                                "score" : "2.30"
+                                                            },
+                                                            {
+                                                                "user"  : "Иванов Иван Иванович",
+                                                                "score" : "2.30"
+                                                            },
+                                                            {
+                                                                "user"  : "Константин Константинович Константинов",
+                                                                "score" : "2.30"
+                                                            },
+                                                            {
+                                                                "user"  : "Иванов Иван Иванович",
+                                                                "score" : "2.30"
+                                                            }
+                                                        ],
+                                                        "summ"      : "2.30"
+                                                    },
+
+                                                    {
+                                                        "number"    : "5.4",
+                                                        "title"     : "Оценка планов центра по сотрудничеству с научно-исследовательскими организациями Российской Федерации",
+                                                        "scores"    : [
+                                                            {
+                                                                "user"  : "Иванов Иван Иванович",
+                                                                "score" : "2.30"
+                                                            },
+                                                            {
+                                                                "user"  : "Иванов Иван Иванович",
+                                                                "score" : "2.30"
+                                                            },
+                                                            {
+                                                                "user"  : "Иванов Иван Иванович",
+                                                                "score" : "2.30"
+                                                            },
+                                                            {
+                                                                "user"  : "Константин Константинович Константинов",
+                                                                "score" : "2.30"
+                                                            },
+                                                            {
+                                                                "user"  : "Иванов Иван Иванович",
+                                                                "score" : "2.30"
+                                                            }
+                                                        ],
+                                                        "summ"      : "2.30"
+                                                    },
+
+                                                    {
+                                                        "number"    : "5.5",
+                                                        "title"     : "Оценка планов центра по сотрудничеству с зарубежными научно-исследовательскими организациями",
+                                                        "scores"    : [
+                                                            {
+                                                                "user"  : "Иванов Иван Иванович",
+                                                                "score" : "2.30"
+                                                            },
+                                                            {
+                                                                "user"  : "Иванов Иван Иванович",
+                                                                "score" : "2.30"
+                                                            },
+                                                            {
+                                                                "user"  : "Иванов Иван Иванович",
+                                                                "score" : "2.30"
+                                                            },
+                                                            {
+                                                                "user"  : "Константин Константинович Константинов",
+                                                                "score" : "2.30"
+                                                            },
+                                                            {
+                                                                "user"  : "Иванов Иван Иванович",
+                                                                "score" : "2.30"
+                                                            }
+                                                        ],
+                                                        "summ"      : "2.30"
+                                                    }
+                                                ]
+                                            },
+
+                                            {
+                                                "number"    : "6",
+                                                "title"     : "Критерий",
+                                                "name"      : "Кадровый потенциал",
+                                                "weight"    : "15",
+                                                "scores"    : [
+                                                    {
+                                                        "user"  : "Иванов Иван Иванович",
+                                                        "score" : "2.30"
+                                                    },
+                                                    {
+                                                        "user"  : "Иванов Иван Иванович",
+                                                        "score" : "2.30"
+                                                    },
+                                                    {
+                                                        "user"  : "Иванов Иван Иванович",
+                                                        "score" : "2.30"
+                                                    },
+                                                    {
+                                                        "user"  : "Константин Константинович Константинов",
+                                                        "score" : "2.30"
+                                                    },
+                                                    {
+                                                        "user"  : "Иванов Иван Иванович",
+                                                        "score" : "2.30"
+                                                    }
+                                                ],
+                                                "summ"      : "2.30",
+                                                "items"     : [
+                                                    {
+                                                        "number"    : "6.1",
+                                                        "title"     : "Оценка плана разработки и внедрения в центре новых образовательных программ и (или) исследовательских программ центра, в том числе международных тематических программ (при необходимости), срок реализации которых от 1 месяца до года",
+                                                        "scores"    : [
+                                                            {
+                                                                "user"  : "Иванов Иван Иванович",
+                                                                "score" : "2.30"
+                                                            },
+                                                            {
+                                                                "user"  : "Иванов Иван Иванович",
+                                                                "score" : "2.30"
+                                                            },
+                                                            {
+                                                                "user"  : "Иванов Иван Иванович",
+                                                                "score" : "2.30"
+                                                            },
+                                                            {
+                                                                "user"  : "Константин Константинович Константинов",
+                                                                "score" : "2.30"
+                                                            },
+                                                            {
+                                                                "user"  : "Иванов Иван Иванович",
+                                                                "score" : "2.30"
+                                                            }
+                                                        ],
+                                                        "summ"      : "2.30"
+                                                    },
+
+                                                    {
+                                                        "number"    : "6.2",
+                                                        "title"     : "Оценка планов проведения центром конференций и мастер-классов, иных мероприятий, в том числе международных",
+                                                        "scores"    : [
+                                                            {
+                                                                "user"  : "Иванов Иван Иванович",
+                                                                "score" : "2.30"
+                                                            },
+                                                            {
+                                                                "user"  : "Иванов Иван Иванович",
+                                                                "score" : "2.30"
+                                                            },
+                                                            {
+                                                                "user"  : "Иванов Иван Иванович",
+                                                                "score" : "2.30"
+                                                            },
+                                                            {
+                                                                "user"  : "Константин Константинович Константинов",
+                                                                "score" : "2.30"
+                                                            },
+                                                            {
+                                                                "user"  : "Иванов Иван Иванович",
+                                                                "score" : "2.30"
+                                                            }
+                                                        ],
+                                                        "summ"      : "2.30"
+                                                    },
+
+                                                    {
+                                                        "number"    : "6.3",
+                                                        "title"     : "Оценка планов центра по привлечению и закреплению ведущих ученых<a title=\"[1] Оценка проводится на основе формы «Сведения о формах привлечения к деятельности центра научных кадров, в том числе иностранных» Программы\">[1]</a>",
+                                                        "scores"    : [
+                                                            {
+                                                                "user"  : "Иванов Иван Иванович",
+                                                                "score" : "2.30"
+                                                            },
+                                                            {
+                                                                "user"  : "Иванов Иван Иванович",
+                                                                "score" : "2.30"
+                                                            },
+                                                            {
+                                                                "user"  : "Иванов Иван Иванович",
+                                                                "score" : "2.30"
+                                                            },
+                                                            {
+                                                                "user"  : "Константин Константинович Константинов",
+                                                                "score" : "2.30"
+                                                            },
+                                                            {
+                                                                "user"  : "Иванов Иван Иванович",
+                                                                "score" : "2.30"
+                                                            }
+                                                        ],
+                                                        "summ"      : "2.30"
+                                                    },
+
+                                                    {
+                                                        "number"    : "6.4",
+                                                        "title"     : "Оценка планов центра по привлечению и закреплению перспективных молодых исследователей<a title=\"[2] Оценка проводится на основе формы «Сведения о формах привлечения к деятельности центра научных кадров, в том числе иностранных» Программы\">[2]</a>",
+                                                        "scores"    : [
+                                                            {
+                                                                "user"  : "Иванов Иван Иванович",
+                                                                "score" : "2.30"
+                                                            },
+                                                            {
+                                                                "user"  : "Иванов Иван Иванович",
+                                                                "score" : "2.30"
+                                                            },
+                                                            {
+                                                                "user"  : "Иванов Иван Иванович",
+                                                                "score" : "2.30"
+                                                            },
+                                                            {
+                                                                "user"  : "Константин Константинович Константинов",
+                                                                "score" : "2.30"
+                                                            },
+                                                            {
+                                                                "user"  : "Иванов Иван Иванович",
+                                                                "score" : "2.30"
+                                                            }
+                                                        ],
+                                                        "summ"      : "2.30"
+                                                    }
+                                                ]
+                                            },
+
+                                            {
+                                                "number"    : "7",
+                                                "title"     : "Критерий",
+                                                "name"      : "Вклад программы в достижение целевых показателей и индикаторов национального проекта «Наука»",
+                                                "weight"    : "10",
+                                                "scores"    : [
+                                                    {
+                                                        "user"  : "Иванов Иван Иванович",
+                                                        "score" : "2.30"
+                                                    },
+                                                    {
+                                                        "user"  : "Иванов Иван Иванович",
+                                                        "score" : "2.30"
+                                                    },
+                                                    {
+                                                        "user"  : "Иванов Иван Иванович",
+                                                        "score" : "2.30"
+                                                    },
+                                                    {
+                                                        "user"  : "Константин Константинович Константинов",
+                                                        "score" : "2.30"
+                                                    },
+                                                    {
+                                                        "user"  : "Иванов Иван Иванович",
+                                                        "score" : "2.30"
+                                                    }
+                                                ],
+                                                "summ"      : "2.30",
+                                                "items"     : [
+                                                    {
+                                                        "number"    : "7.1",
+                                                        "title"     : "Оценка соответствия предлагаемых научных исследований целям и задачам национального проекта «Наука»",
+                                                        "scores"    : [
+                                                            {
+                                                                "user"  : "Иванов Иван Иванович",
+                                                                "score" : "2.30"
+                                                            },
+                                                            {
+                                                                "user"  : "Иванов Иван Иванович",
+                                                                "score" : "2.30"
+                                                            },
+                                                            {
+                                                                "user"  : "Иванов Иван Иванович",
+                                                                "score" : "2.30"
+                                                            },
+                                                            {
+                                                                "user"  : "Константин Константинович Константинов",
+                                                                "score" : "2.30"
+                                                            },
+                                                            {
+                                                                "user"  : "Иванов Иван Иванович",
+                                                                "score" : "2.30"
+                                                            }
+                                                        ],
+                                                        "summ"      : "2.30"
+                                                    },
+
+                                                    {
+                                                        "number"    : "7.2",
+                                                        "title"     : "Оценка планируемого вклада в достижение целевых показателей национального проекта «Наука» (на конец 2024 года)",
+                                                        "scores"    : [
+                                                            {
+                                                                "user"  : "Иванов Иван Иванович",
+                                                                "score" : "2.30"
+                                                            },
+                                                            {
+                                                                "user"  : "Иванов Иван Иванович",
+                                                                "score" : "2.30"
+                                                            },
+                                                            {
+                                                                "user"  : "Иванов Иван Иванович",
+                                                                "score" : "2.30"
+                                                            },
+                                                            {
+                                                                "user"  : "Константин Константинович Константинов",
+                                                                "score" : "2.30"
+                                                            },
+                                                            {
+                                                                "user"  : "Иванов Иван Иванович",
+                                                                "score" : "2.30"
+                                                            }
+                                                        ],
+                                                        "summ"      : "2.30"
+                                                    }
+                                                ]
+                                            }
+                                        ]
+                                    }
+                                ],
+
+                                "summ"      : {
+                                    "title"     : "Итого",
+                                    "summ_all"  : "9.95",
+                                    "scores"    : [
+                                        {
+                                            "user"  : "Иванов Иван Иванович",
+                                            "score" : "9.95"
+                                        },
+                                        {
+                                            "user"  : "Иванов Иван Иванович",
+                                            "score" : "9.95"
+                                        },
+                                        {
+                                            "user"  : "Иванов Иван Иванович",
+                                            "score" : "9.95"
+                                        },
+                                        {
+                                            "user"  : "Константин Константинович Константинов",
+                                            "score" : "9.95"
+                                        },
+                                        {
+                                            "user"  : "Иванов Иван Иванович",
+                                            "score" : "9.95"
+                                        }
+                                    ]
+                                }
+                };
+            </script>
+
+            <div class="riepp-scores">
+                <div class="riepp-scores-header">
+                    <div class="riepp-scores-header-number">№<br /> П/П</div>
+                    <div class="riepp-scores-header-title">Тип индикатора</div>
+                    <div class="riepp-scores-header-name">Наименование группы<br /> критериев / критерия<br /> /показателя критерия</div>
+                    <div class="riepp-scores-header-weight">Весовое<br /> значение,<br /> %</div>
+                    <div class="riepp-scores-header-summ">Итого:</div>
+                </div>
+
+                <div class="riepp-scores-list">
+                    <div class="riepp-scores-list-inner">
+                        <div class="riepp-scores-list-header"></div>
+                    </div>
+                </div>
+            </div>
+
 		</div>
 	</div>
 </div>
@@ -586,6 +1400,7 @@ summ_all=0;
 
 
 
+<script src="new/js/mcustomscrollbar/jquery.mCustomScrollbar.concat.min.js"></script>
 <script src="new/js/scripts.js"></script>
 </body>
 </html>
