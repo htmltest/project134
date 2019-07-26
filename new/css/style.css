@@ -72,7 +72,7 @@ blockquote.success_info p b {font-weight:normal; color:#4e4e4e}
 .cabinet-content form {margin:0; padding:0}
 
 .entry .cabinet-content table {margin:0}
-.entry .cabinet-content table tr th {color:#393939; font-size:16px; font-weight:500; line-height:19px; padding:18px 30px 16px 30px; letter-spacing:0.03em; text-transform:none; background:#f5f5f5; border:1px solid #e1e1e1}
+.entry .cabinet-content table tr th {color:#393939; font-size:16px; font-weight:500; line-height:19px; padding:18px 30px 16px 30px; letter-spacing:0.03em; text-transform:none; background:rgba(28, 72, 163, 0.06); border:1px solid #e1e1e1}
 .entry .cabinet-content table tr th:first-child {padding-left:20px; padding-right:20px}
 .entry .cabinet-content table tr td {vertical-align:top; font-size:16px; line-height:24px; border:1px solid #e1e1e1; padding:21px 30px 22px 30px; color:#4e4e4e}
 .entry .cabinet-content table tr td:first-child {padding-left:20px; padding-right:20px}
@@ -138,15 +138,15 @@ blockquote.success_info p b {font-weight:normal; color:#4e4e4e}
 }
 
 .entry .upload {padding:0 0 39px 0; position:relative; min-height:39px; box-sizing:border-box; text-align:left}
-.entry .upload > a {position:absolute; left:0; bottom:0; color:#4e4e4e; width:215px; height:39px; padding:0 0 0 17px; box-sizing:border-box; border:none; background:rgba(28, 72, 163, 0.06); font-size:14px; font-weight:300; line-height:39px; text-align:left; white-space:nowrap; text-overflow:ellipsis; overflow:hidden; cursor:pointer}
+.entry .upload > a {position:absolute; left:0; bottom:0; color:#4e4e4e; width:215px; height:39px; padding:0 0 0 17px; box-sizing:border-box; border:none; background:#f2f4fa; font-size:14px; font-weight:300; line-height:39px; text-align:left; white-space:nowrap; text-overflow:ellipsis; overflow:hidden; cursor:pointer}
 .entry .upload > a::after {content:""; display:block; position:absolute; right:18px; top:11px; width:19px; height:17px; background:url(../images/entry-upload.svg) no-repeat}
 .entry .upload > a:hover {background:#dde4f1; color:#0a0a0a}
 .entry .upload > a:active {background:#f1f4f9; color:#0a0a0a}
-.entry .fu_file {display:inline-block; vertical-align:top; min-width:215px; max-width:255px; height:39px; padding:0; box-sizing:border-box; margin:0 0 10px 0; border:none; background:rgba(28, 72, 163, 0.06); font-size:14px; font-weight:normal; line-height:39px; color:#1c48a3; position:relative; left:auto; top:auto; right:auto; bottom:auto}
+.entry .fu_file {display:inline-block; vertical-align:top; min-width:215px; max-width:255px; height:39px; padding:0; box-sizing:border-box; margin:0 0 10px 0; border:none; background:#f2f4fa; font-size:14px; font-weight:normal; line-height:39px; color:#1c48a3; position:relative; left:auto; top:auto; right:auto; bottom:auto}
 .entry .fu_file.error {color:rgba(255, 0, 0, 0.75)}
 .entry .fu_file:hover {background:#dde4f1}
 .entry .fu_file:active {background:#f1f4f9}
-.entry .fu_file .progress {height:39px; background:rgba(28, 72, 163, 0.06)}
+.entry .fu_file .progress {height:39px; background:#f2f4fa}
 .entry .fu_file p {transform:none; top:auto; position:relative; margin:0; padding:0 30px 0 17px; color:#1c48a3; font-size:14px; line-height:39px; text-align:left; white-space:nowrap; text-overflow:ellipsis; overflow:hidden}
 .entry .fu_file.error p {color:rgba(255, 0, 0, 0.75)}
 .entry .fu_file a {display:block; color:#1c48a3; background:none; padding:0 30px 0 17px; margin:0 -30px 0 -17px; font-size:14px; line-height:39px; text-align:left; white-space:nowrap; text-overflow:ellipsis; overflow:hidden; position:relative}
@@ -365,9 +365,9 @@ blockquote.success_info p b {font-weight:normal; color:#4e4e4e}
 
 .riepp-score h1::after {content:""; display:block; clear:both}
 .riepp-score h1 .cabinet-expert-requests-score {display:inline-block; vertical-align:middle; margin:-2px 0 0 25px; color:#1c48a3}
-.riepp-score-view-link {display:block; float:right; margin:-4px 0 0 0; height:39px; background:rgba(28, 72, 163, 0.06); padding:0 15px; color:#1c48a3; font-weight:300; font-size:14px; line-height:39px; white-space:nowrap; box-sizing:border-box}
-.riepp-score-view-link:hover {text-decoration:underline; color:#1c48a3; background:#dde4f1}
-.riepp-score-view-link:active {text-decoration:none; color:#1c48a3; background:#f1f4f9}
+.riepp-score-view-link {display:block; float:right; margin:-4px 0 0 0; height:39px; background:rgba(28, 72, 163, 0.06); padding:0 15px; color:#4e4e4e; font-weight:300; font-size:14px; line-height:39px; white-space:nowrap; box-sizing:border-box}
+.riepp-score-view-link:hover {text-decoration:underline; color:#4e4e4e; background:#dde4f1}
+.riepp-score-view-link:active {text-decoration:none; color:#4e4e4e; background:#f1f4f9}
 .riepp-score-view-link svg {display:inline-block; vertical-align:middle; margin:-2px 9px 0 0}
 .riepp-score-view-link path {fill:#bfbfbf}
 .riepp-score.open .riepp-score-view-link path {fill:#476ab4}
@@ -447,7 +447,8 @@ blockquote.success_info p b {font-weight:normal; color:#4e4e4e}
     .riepp-score.open .riepp-scores-criterion-name {float:none; width:auto; border-left:none; padding:0; min-height:0 !important}
     .riepp-scores-criterion-weight,
     .riepp-score.open .riepp-scores-criterion-weight {float:none; width:auto; border-left:none; border-right:none; padding:0; min-height:0 !important}
-    .riepp-scores-criterion-scores {display:block; border:1px solid #e1e1e1; overflow:hidden; margin:23px 0 0 0; position:relative}
+    .riepp-scores-criterion-scores {border:1px solid #e1e1e1; overflow:hidden; margin:23px 0 0 0; position:relative}
+    .riepp-score.open .riepp-scores-criterion-scores {display:block}
     .riepp-scores-criterion-scores.mCustomScrollbar::after {content:""; display:block; position:absolute; right:0; top:0; bottom:8px; left:0; background:linear-gradient(270deg, #ecfde9 0%, rgba(236, 253, 233, 0) 16.35%); pointer-events:none; z-index:1; opacity:1; transition:all 0.2s}
     .riepp-scores-criterion-scores.mCustomScrollbar.mCS_no_scrollbar::after,
     .riepp-scores-criterion-scores.mCustomScrollbar.isRight::after {opacity:0}
@@ -474,7 +475,8 @@ blockquote.success_info p b {font-weight:normal; color:#4e4e4e}
     .riepp-scores-item-number {float:none; width:auto; padding:0; display:inline; min-height:0 !important; margin-right:5px; font-weight:500}
     .riepp-scores-item-title,
     .riepp-score.open .riepp-scores-item-title {float:none; width:auto; border-left:none; border-right:none; padding:0; display:inline; min-height:0 !important}
-    .riepp-scores-item-scores {display:block; border:1px solid #e1e1e1; overflow:hidden; margin:23px 0 0 0; position:relative}
+    .riepp-scores-item-scores {border:1px solid #e1e1e1; overflow:hidden; margin:23px 0 0 0; position:relative}
+    .riepp-score.open .riepp-scores-item-scores {display:block}
     .riepp-scores-item-scores.mCustomScrollbar::after {content:""; display:block; position:absolute; right:0; top:0; bottom:8px; left:0; background:linear-gradient(270deg, #fff 0%, rgba(255, 255, 255, 0) 16.35%); pointer-events:none; z-index:1; opacity:1; transition:all 0.2s}
     .riepp-scores-item-scores.mCustomScrollbar.mCS_no_scrollbar::after,
     .riepp-scores-item-scores.mCustomScrollbar.isRight::after {opacity:0}
@@ -502,7 +504,8 @@ blockquote.success_info p b {font-weight:normal; color:#4e4e4e}
     .riepp-scores-summ-title {float:left; width:auto; padding:0; text-align:left; min-height:0 !important; margin:0 10px 0 0}
     .riepp-scores-summ-name {display:none}
     .riepp-scores-summ-all {float:left; width:auto; border-left:none; padding:0; margin-left:0; min-height:0 !important}
-    .riepp-scores-summ-scores {display:block; float:left; clear:left; width:100%; border:1px solid #e1e1e1; overflow:hidden; margin:23px 0 0 0; position:relative}
+    .riepp-scores-summ-scores {float:left; clear:left; width:100%; border:1px solid #e1e1e1; overflow:hidden; margin:23px 0 0 0; position:relative}
+    .riepp-score.open .riepp-scores-summ-scores {display:block}
     .riepp-scores-summ-scores.mCustomScrollbar::after {content:""; display:block; position:absolute; right:0; top:0; bottom:8px; left:0; background:linear-gradient(270deg, #fff 0%, rgba(255, 255, 255, 0) 16.35%); pointer-events:none; z-index:1; opacity:1; transition:all 0.2s}
     .riepp-scores-summ-scores.mCustomScrollbar.mCS_no_scrollbar::after,
     .riepp-scores-summ-scores.mCustomScrollbar.isRight::after {opacity:0}
