@@ -162,7 +162,8 @@
 	<div class="cabinet-container">
 		<div class="cabinet-content">
 			<h3 class="expert-request-h3">Экспертное заключение</h3>
-							<table border="0" width="100%" cellspacing="0" cellpadding="0" class='form-table'>
+			<form method="post" class="validate">
+							<table border="0" width="100%" cellspacing="0" cellpadding="0" class='form-table riepp-request-conclusion'>
                             <thead>
 				<tr>
 					<th width="">Название</th>
@@ -171,30 +172,37 @@
                 </thead>
                 <tbody>
 			<tr>
-			<td>Экспертное заключение РИЭПП</td>
+			<td>Экспертное заключение</td>
 						<td>
-						<a href="/upload/iblock/47f/recense.pdf" class="cabinet-docs-link">recense.pdf</a>
+												<div class="upload">
+														<a>перенесите сюда файл</a>
+							<input type="file" name="upl1" />
+							<input type="hidden" name="fname1" value="" />
+													</div>
 			</td>
 			</tr>
 			<tr>
-			<td>Дата подачи</td>
-			<td> 17.06.2019 14:02:53			</td>
+			<td>Член совета, аффилированый с центром</td>
+			<td>
+                <div class="riepp-request-affiliated-select">
+                    <div class="riepp-request-affiliated-select-value">ФИО Члена совета</div>
+                    <div class="riepp-request-affiliated-select-list">
+                        <label><input type="radio" name="affiliated" value="1" class="required" /><span>Смирнов Станислав Константинович</span></label>
+                        <label><input type="radio" name="affiliated" value="2" class="required" /><span>Котюков Михаил Михайлович</span></label>
+                        <label><input type="radio" name="affiliated" value="3" class="required" /><span>Садовничий Виктор Антонович</span></label>
+                        <label><input type="radio" name="affiliated" value="4" class="required" /><span>Голикова Татьяна Алексеевна</span></label>
+                        <label><input type="radio" name="affiliated" value="5" class="required" /><span>Котюков Михаил Михайлович</span></label>
+                        <label><input type="radio" name="affiliated" value="6" class="required" /><span>Голикова Татьяна Алексеевна</span></label>
+                    </div>
+                </div>
+            </td>
 			</tr>
-			<tr>
-			<td>
-			логин менеджера РИЭПП, подавшего рецензию
-			</td>
-			<td>
-			Эксперт РИЭПП 2			</td>
-			</tr>
-			<tr>
-			<td>
-			Член совета, афилированный с центром
-			</td>
-			<td>
-			Котюков Михаил Михайлович			</td>
-			</tr></tbody>
+            </tbody>
 			</table>
+            <div class="form_sub riepp-request-conclusion-btn">
+                <input class="btn red btn_sm" type="submit" name="send" id="form-sub-send" value="Отправить данные" />
+            </div>
+        </form>
 
 				<!-- <table border="0" width="100%" cellspacing="0" cellpadding="0" class='form-table'>
 				<tr>

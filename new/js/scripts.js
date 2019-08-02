@@ -36,8 +36,15 @@ $(document).ready(function() {
         var newHTML = '<div class="riepp-scores-list-summ">';
         var scoresHTML = '';
         for (var i = 0; i < countScores; i++) {
-            newHTML += '<div class="riepp-scores-list-summ-item">' + scores.summ.scores[i].score + '</div>';
-            scoresHTML += '<div class="riepp-scores-summ-scores-item"><div class="riepp-scores-summ-scores-item-user">' + scores.summ.scores[i].user + '</div><div class="riepp-scores-summ-scores-item-value">' + scores.summ.scores[i].score + '</div></div>';
+            if (scores.summ.scores[i].summ == '') {
+                scores.summ.scores[i].summ = '&nbsp;';
+            }
+            newHTML += '<div class="riepp-scores-list-summ-item"><div class="riepp-scores-list-summ-item-col">' + scores.summ.scores[i].score + '</div><div class="riepp-scores-list-summ-item-col">' + scores.summ.scores[i].summ + '</div></div>';
+            var notScoreClass = '';
+            if (typeof (scores.summ.scores[i].not) != 'undefined') {
+                notScoreClass = ' riepp-not-score';
+            }
+            scoresHTML += '<div class="riepp-scores-summ-scores-item"><div class="riepp-scores-summ-scores-item-user ' + notScoreClass + '">' + scores.summ.scores[i].user + '</div><div class="riepp-scores-summ-scores-item-value">' + scores.summ.scores[i].score + '</div></div>';
         }
         newHTML += '</div>';
         curBlock.find('.riepp-scores-list-inner').append(newHTML);
@@ -69,8 +76,15 @@ $(document).ready(function() {
                 var newHTML = '<div class="riepp-scores-list-criterion">';
                 var scoresHTML = '';
                 for (var i = 0; i < countScores; i++) {
-                    newHTML += '<div class="riepp-scores-list-criterion-item">' + curCriterion.scores[i].score + '</div>';
-                    scoresHTML += '<div class="riepp-scores-criterion-scores-item"><div class="riepp-scores-criterion-scores-item-user">' + curCriterion.scores[i].user + '</div><div class="riepp-scores-criterion-scores-item-value">' + curCriterion.scores[i].score + '</div></div>';
+                    if (curCriterion.scores[i].summ == '') {
+                        curCriterion.scores[i].summ = '&nbsp;';
+                    }
+                    newHTML += '<div class="riepp-scores-list-criterion-item"><div class="riepp-scores-list-criterion-item-col">' + curCriterion.scores[i].score + '</div><div class="riepp-scores-list-criterion-item-col">' + curCriterion.scores[i].summ + '</div></div>';
+                    var notScoreClass = '';
+                    if (typeof (curCriterion.scores[i].not) != 'undefined') {
+                        notScoreClass = ' riepp-not-score';
+                    }
+                    scoresHTML += '<div class="riepp-scores-criterion-scores-item"><div class="riepp-scores-criterion-scores-item-user ' + notScoreClass + '">' + curCriterion.scores[i].user + '</div><div class="riepp-scores-criterion-scores-item-value">' + curCriterion.scores[i].score + '</div></div>';
                 }
                 newHTML += '</div>';
                 curBlock.find('.riepp-scores-list-inner').append(newHTML);
@@ -86,25 +100,27 @@ $(document).ready(function() {
 
                 for (var itemIndex = 0; itemIndex < curCriterion.items.length; itemIndex++) {
                     var curItem = curCriterion.items[itemIndex];
-                    var countScores = curItem.scores.length;
                     var newHTML = '<div class="riepp-scores-list-row">';
                     var scoresHTML = '';
                     for (var i = 0; i < countScores; i++) {
-                        newHTML += '<div class="riepp-scores-list-row-item">' + curItem.scores[i].score + '</div>';
-                        scoresHTML += '<div class="riepp-scores-item-scores-item"><div class="riepp-scores-item-scores-item-user">' + curItem.scores[i].user + '</div><div class="riepp-scores-item-scores-item-value">' + curItem.scores[i].score + '</div></div>';
+                        newHTML += '<div class="riepp-scores-list-row-item">&nbsp;</div>';
+                        scoresHTML += '<div class="riepp-scores-item-scores-item">&nbsp;</div>';
                     }
                     newHTML += '</div>';
                     curBlock.find('.riepp-scores-list-inner').append(newHTML);
                     curBlock.append('<div class="riepp-scores-item">' +
                                         '<div class="riepp-scores-item-number">' + curItem.number + '</div>' +
-                                        '<div class="riepp-scores-item-title">' + curItem.title + '</div>' +
                                         '<div class="riepp-scores-item-scores"><div class="riepp-scores-item-scores-inner">' + scoresHTML + '</div></div>' +
-                                        '<div class="riepp-scores-item-summ"><div class="riepp-scores-label">' + headerSumm + '</div>' + curItem.summ + '</div>' +
+                                        '<div class="riepp-scores-item-title">' + curItem.title + '</div>' +
                                     '</div>');
                 }
                 if (groupIndex == 0 && criterionIndex == 0) {
                     for (var criterionScoreIntex = 0; criterionScoreIntex < curCriterion.scores.length; criterionScoreIntex++) {
-                        curBlock.find('.riepp-scores-list-header').append('<div class="riepp-scores-list-header-item">' + curCriterion.scores[criterionScoreIntex].user + '</div>');
+                        var notScoreClass = '';
+                        if (typeof (curCriterion.scores[criterionScoreIntex].not) != 'undefined') {
+                            notScoreClass = ' riepp-not-score';
+                        }
+                        curBlock.find('.riepp-scores-list-header').append('<div class="riepp-scores-list-header-item' + notScoreClass + '">' + curCriterion.scores[criterionScoreIntex].user + '</div>');
                     }
                 }
             }
@@ -114,8 +130,12 @@ $(document).ready(function() {
         var newHTML = '<div class="riepp-scores-list-summ">';
         var scoresHTML = '';
         for (var i = 0; i < countScores; i++) {
-            newHTML += '<div class="riepp-scores-list-summ-item">' + scores.summ.scores[i].score + '</div>';
-            scoresHTML += '<div class="riepp-scores-summ-scores-item"><div class="riepp-scores-summ-scores-item-user">' + scores.summ.scores[i].user + '</div><div class="riepp-scores-summ-scores-item-value">' + scores.summ.scores[i].score + '</div></div>';
+            newHTML += '<div class="riepp-scores-list-summ-item"><div class="riepp-scores-list-summ-item-col">' + scores.summ.scores[i].score + '</div><div class="riepp-scores-list-summ-item-col">' + scores.summ.scores[i].summ + '</div></div>';
+            var notScoreClass = '';
+            if (typeof (scores.summ.scores[i].not) != 'undefined') {
+                notScoreClass = ' riepp-not-score';
+            }
+            scoresHTML += '<div class="riepp-scores-summ-scores-item"><div class="riepp-scores-summ-scores-item-user ' + notScoreClass + '">' + scores.summ.scores[i].user + '</div><div class="riepp-scores-summ-scores-item-value">' + scores.summ.scores[i].score + '</div></div>';
         }
         newHTML += '</div>';
         curBlock.find('.riepp-scores-list-inner').append(newHTML);
@@ -211,6 +231,87 @@ $(document).ready(function() {
         });
 
     });
+
+    $('.riepp-request-affiliated-select-list input').styler('destroy');
+    $('.riepp-request-affiliated-select-value').click(function(e) {
+        var curSelect = $(this).parent();
+        if (curSelect.hasClass('open')) {
+            curSelect.removeClass('open');
+        } else {
+            curSelect.addClass('open');
+        }
+    });
+
+    $(document).click(function(e) {
+        if ($(e.target).parents().filter('.riepp-request-affiliated-select').length == 0) {
+            $('.riepp-request-affiliated-select.open').removeClass('open');
+        }
+    });
+
+    $('.riepp-request-affiliated-select-list label input').change(function() {
+        $('.riepp-request-affiliated-select-value').html($('.riepp-request-affiliated-select-list label input:checked').parent().find('span').html());
+        $('.riepp-request-affiliated-select.open').removeClass('open');
+    });
+
+    if ($('.riepp-request-affiliated-select').length > 0) {
+        window.setInterval(function() {
+            $('.riepp-request-affiliated-select').each(function() {
+                var curSelect = $(this);
+                curSelect.find('> label.error').remove();
+                if (curSelect.find('input.error').length > 0) {
+                    curSelect.append('<label class="error">Это поле необходимо заполнить.</label>');
+                }
+            });
+        }, 100);
+    }
+
+    $('.kr-score-select-list input').styler('destroy');
+    $('.kr-score-select-value').click(function(e) {
+        var curSelect = $(this).parent();
+        if (curSelect.hasClass('open')) {
+            curSelect.removeClass('open');
+        } else {
+            $('.kr-score-select.open').removeClass('open');
+            curSelect.addClass('open');
+        }
+    });
+
+    $(document).click(function(e) {
+        if ($(e.target).parents().filter('.kr-score-select').length == 0) {
+            $('.kr-score-select.open').removeClass('open');
+        }
+    });
+
+    $('.kr-score-select-list label input').change(function() {
+        var curSelect = $(this).parents().filter('.kr-score-select');
+        curSelect.find('.kr-score-select-value').html(curSelect.find('.kr-score-select-list label input:checked').parent().find('span').html());
+        $('.kr-score-select.open').removeClass('open');
+        var summ_all = 0;
+        var summ_b = 0;
+        $('.kr-score-select').each(function() {
+            var curCriterion = $(this).parent().parent();
+            var curWeight = Number(curCriterion.find('td').eq(3).html());
+            if (curCriterion.find('.kr-score-select-list label input:checked').length > 0) {
+                var curValue = Number(curCriterion.find('.kr-score-select-list label input:checked').val());
+                summ_all += curWeight / 100 * curValue;
+                summ_b += curWeight;
+            }
+        });
+        $('.SUMM_ALL').html(Number(summ_all).toFixed(2));
+        $('.SUMM_B_ALL').html(summ_b);
+    });
+
+    if ($('.kr-score-select').length > 0) {
+        window.setInterval(function() {
+            $('.kr-score-select').each(function() {
+                var curSelect = $(this);
+                curSelect.find('> label.error').remove();
+                if (curSelect.find('input.error').length > 0) {
+                    curSelect.append('<label class="error">Это поле необходимо заполнить.</label>');
+                }
+            });
+        }, 100);
+    }
 
 });
 

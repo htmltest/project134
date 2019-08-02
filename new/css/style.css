@@ -458,6 +458,7 @@ blockquote.success_info p b {font-weight:normal; color:#4e4e4e}
     .riepp-scores-criterion-scores-item {display:table-cell; vertical-align:top; padding:20px 22px 0 22px}
     .riepp-scores-criterion-scores.mCustomScrollbar.mCS_no_scrollbar .riepp-scores-criterion-scores-item {padding-bottom:20px}
     .riepp-scores-criterion-scores-item-user {font-size:16px; line-height:19px; color:#7e7e7e; font-weight:normal}
+    .riepp-scores-criterion-scores-item-user.riepp-not-score {color:#ff2e2e}
     .riepp-scores-criterion-scores-item-value {font-size:16px; line-height:24px; color:#4e4e4e; font-weight:bold; margin:8px 0 0 0}
     .riepp-scores-criterion-summ {float:none; width:auto; border-left:none; padding:0; min-height:0 !important; margin:19px 0 0 0}
 }
@@ -476,7 +477,6 @@ blockquote.success_info p b {font-weight:normal; color:#4e4e4e}
     .riepp-scores-item-title,
     .riepp-score.open .riepp-scores-item-title {float:none; width:auto; border-left:none; border-right:none; padding:0; display:inline; min-height:0 !important}
     .riepp-scores-item-scores {border:1px solid #e1e1e1; overflow:hidden; margin:23px 0 0 0; position:relative}
-    .riepp-score.open .riepp-scores-item-scores {display:block}
     .riepp-scores-item-scores.mCustomScrollbar::after {content:""; display:block; position:absolute; right:0; top:0; bottom:8px; left:0; background:linear-gradient(270deg, #fff 0%, rgba(255, 255, 255, 0) 16.35%); pointer-events:none; z-index:1; opacity:1; transition:all 0.2s}
     .riepp-scores-item-scores.mCustomScrollbar.mCS_no_scrollbar::after,
     .riepp-scores-item-scores.mCustomScrollbar.isRight::after {opacity:0}
@@ -486,6 +486,7 @@ blockquote.success_info p b {font-weight:normal; color:#4e4e4e}
     .riepp-scores-item-scores-item {display:table-cell; vertical-align:top; padding:20px 22px 0 22px}
     .riepp-scores-item-scores.mCustomScrollbar.mCS_no_scrollbar .riepp-scores-item-scores-item {padding-bottom:20px}
     .riepp-scores-item-scores-item-user {font-size:16px; line-height:19px; color:#7e7e7e; font-weight:normal}
+    .riepp-scores-item-scores-item-user.riepp-not-score {color:#ff2e2e}
     .riepp-scores-item-scores-item-value {font-size:16px; line-height:24px; color:#4e4e4e; font-weight:bold; margin:8px 0 0 0}
     .riepp-scores-item-summ {float:none; width:auto; border-left:none; padding:0; min-height:0 !important; margin:19px 0 0 0}
     .riepp-scores-item-summ {float:none; width:auto; border-left:none; padding:0; margin:19px 0 0 0; min-height:0 !important}
@@ -515,6 +516,7 @@ blockquote.success_info p b {font-weight:normal; color:#4e4e4e}
     .riepp-scores-summ-scores-item {display:table-cell; vertical-align:top; padding:20px 22px 0 22px}
     .riepp-scores-summ-scores.mCustomScrollbar.mCS_no_scrollbar .riepp-scores-summ-scores-item {padding-bottom:20px}
     .riepp-scores-summ-scores-item-user {font-size:16px; line-height:19px; color:#7e7e7e; font-weight:normal}
+    .riepp-scores-summ-scores-item-user.riepp-not-score {color:#ff2e2e}
     .riepp-scores-summ-scores-item-value {font-size:16px; line-height:24px; color:#4e4e4e; font-weight:bold; margin:8px 0 0 0}
 }
 
@@ -535,19 +537,76 @@ blockquote.success_info p b {font-weight:normal; color:#4e4e4e}
 .riepp-scores-list-header {display:table-row; background:rgba(28, 72, 163, 0.06); font-weight:500; color:#393939; font-size:16px; line-height:19px}
 .riepp-scores-list-header-item {display:table-cell; vertical-align:top; border-left:1px solid #e1e1e1; padding:20px 20px 26px 20px}
 .riepp-scores-list-header-item:first-child {border-left:none}
+.riepp-scores-list-header-item.riepp-not-score {color:#ff2e2e}
 
 .riepp-scores-list-group {display:table-row; font-size:16px; line-height:24px; font-weight:normal}
 .riepp-scores-list-group-item {display:table-cell; vertical-align:top; border-top:1px solid #e1e1e1; border-left:1px solid #e1e1e1; padding:26px 0 23px 20px}
 .riepp-scores-list-group-item:first-child {border-left:none}
 
 .riepp-scores-list-criterion {display:table-row; font-weight:bold; color:#4e4e4e; font-size:16px; line-height:24px; background:rgba(120, 243, 100, 0.14)}
-.riepp-scores-list-criterion-item {display:table-cell; vertical-align:top; border-top:1px solid #e1e1e1; border-left:1px solid #e1e1e1; padding:26px 0 23px 20px}
+.riepp-scores-list-criterion-item {display:table-cell; vertical-align:top; border-top:1px solid #e1e1e1; border-left:1px solid #e1e1e1; position:relative}
 .riepp-scores-list-criterion-item:first-child {border-left:none}
+.riepp-scores-list-criterion-item-col {float:left; width:50%; padding:26px 10px 23px 10px}
+.riepp-scores-list-criterion-item::after {content:""; display:block; position:absolute; left:50%; top:0; bottom:0; width:1px; background:#e1e1e1}
 
 .riepp-scores-list-row {display:table-row; font-weight:bold; color:#4e4e4e; font-size:16px; line-height:24px}
 .riepp-scores-list-row-item {display:table-cell; vertical-align:top; border-top:1px solid #e1e1e1; border-left:1px solid #e1e1e1; padding:26px 0 23px 20px}
 .riepp-scores-list-row-item:first-child {border-left:none}
 
 .riepp-scores-list-summ {display:table-row; font-weight:bold; color:#4e4e4e; font-size:16px; line-height:24px}
-.riepp-scores-list-summ-item {display:table-cell; vertical-align:top; border-top:1px solid #e1e1e1; border-left:1px solid #e1e1e1; padding:26px 0 23px 20px}
+.riepp-scores-list-summ-item {display:table-cell; vertical-align:top; border-top:1px solid #e1e1e1; border-left:1px solid #e1e1e1}
 .riepp-scores-list-summ-item:first-child {border-left:none}
+.riepp-scores-list-summ-item-col {float:left; width:50%; border-left:1px solid #e1e1e1; padding:26px 10px 23px 10px}
+.riepp-scores-list-summ-item-col:first-child {border-left:none}
+
+.riepp-request-affiliated-select {position:relative; width:271px}
+.riepp-request-affiliated-select.open {z-index:19}
+.riepp-request-affiliated-select-value {border:1px solid #afbfde; background:rgba(28, 72, 163, 0.06); padding:0 41px 0 12px; color:#4e4e4e; font-size:14px; line-height:37px; height:39px; white-space:nowrap; font-weight:300; overflow:hidden; position:relative; text-overflow:ellipsis; box-sizing:border-box; cursor:pointer}
+.riepp-request-affiliated-select-value::after {content:""; display:block; width:13px; height:8px; background:url(../images/riepp-request-affiliated-select.svg) no-repeat; position:absolute; right:14px; top:15px}
+.riepp-request-affiliated-select-list {display:none; position:absolute; left:0; top:100%; margin-top:-1px; width:100%; box-sizing:border-box; white-space:nowrap; background:#fff; border:1px solid #afbfde; max-height:250px; overflow:auto}
+.riepp-request-affiliated-select.open .riepp-request-affiliated-select-list {display:block}
+.riepp-request-affiliated-select-list label {border-top:1px solid #afbfde; display:block; cursor:pointer}
+.riepp-request-affiliated-select-list label:first-child {border-top:none}
+.riepp-request-affiliated-select-list label input {display:none}
+.riepp-request-affiliated-select-list label label.error {display:none !important}
+.riepp-request-affiliated-select-list label span {display:block; padding:0 12px; position:relative; overflow:hidden; text-overflow:ellipsis; color:#4e4e4e; line-height:37px; font-size:14px; font-weight:300}
+.riepp-request-affiliated-select-list label input:checked+span,
+.riepp-request-affiliated-select-list label input:checked+label.error+span,
+.riepp-request-affiliated-select-list label span:hover {background:rgba(28, 72, 163, 0.06)}
+
+@media (max-width:1020px) {
+    .riepp-request-affiliated-select {width:100%}
+}
+
+.entry .cabinet-content table.riepp-request-conclusion tr td {vertical-align:middle}
+.entry .riepp-request-conclusion-btn {border-bottom:1px solid #e1e1e1; margin:0 -57px; padding:40px 57px}
+
+@media (max-width:1020px) {
+    .entry .cabinet-content table.riepp-request-conclusion tr td:first-child {font-weight:normal}
+    .entry .riepp-request-conclusion-btn {margin:0 -20px; padding:40px 20px}
+}
+
+.riepp-request-conclusion-name {font-size:14px; line-height:21px; color:#4e4e4e; font-weight:300}
+
+@media (max-width:1020px) {
+    .riepp-request-conclusion-name {padding:5px 0 0 0}
+}
+
+.kr-score-select {position:relative; width:159px; line-height:17px}
+.kr-score-select.open {z-index:19}
+.kr-score-select-value {border:1px solid #afbfde; background:#f1f4f9; padding:0 41px 0 12px; color:#4e4e4e; font-size:14px; line-height:37px; height:39px; white-space:nowrap; font-weight:300; overflow:hidden; position:relative; text-overflow:ellipsis; box-sizing:border-box; cursor:pointer}
+.kr-score-select-value::after {content:""; display:block; width:13px; height:8px; background:url(../images/riepp-request-affiliated-select.svg) no-repeat; position:absolute; right:14px; top:15px}
+.kr-score-select-list {display:none; position:absolute; right:0; top:100%; margin-top:-1px; width:382px; padding:0 0 8px 0; box-sizing:border-box; background:#fff; border:1px solid #afbfde; overflow:hidden}
+.kr-score-select.open .kr-score-select-list {display:block}
+.kr-score-select-list label {float:left; margin:11px 0 0 10px; display:block; cursor:pointer}
+.kr-score-select-list label input {display:none}
+.kr-score-select-list label label.error {display:none !important}
+.kr-score-select-list label span {display:block; width:27px; height:27px; position:relative; color:#4e4e4e; line-height:25px; font-size:14px; font-weight:300; background:#f1f4f9; border:1px solid #f1f4f9; transition:all 0.15s; border-radius:50%; text-align:center; box-sizing:border-box}
+.kr-score-select-list label span:hover {border-color:#476ab4}
+.kr-score-select-list label span:active {border-color:#476ab4; background:#d2dff5}
+.kr-score-select-list label input:checked+span,
+.kr-score-select-list label input:checked+label.error+span {border-color:#d2dff5; background:#d2dff5}
+
+@media (max-width:1020px) {
+    .kr-score-select {width:100%}
+}
