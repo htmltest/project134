@@ -253,18 +253,6 @@ $(document).ready(function() {
         $('.riepp-request-affiliated-select.open').removeClass('open');
     });
 
-    if ($('.riepp-request-affiliated-select').length > 0) {
-        window.setInterval(function() {
-            $('.riepp-request-affiliated-select').each(function() {
-                var curSelect = $(this);
-                curSelect.find('> label.error').remove();
-                if (curSelect.find('input.error').length > 0) {
-                    curSelect.append('<label class="error">Это поле необходимо заполнить.</label>');
-                }
-            });
-        }, 100);
-    }
-
     $('.kr-score-select-list input').styler('destroy');
     $('.kr-score-select-value').click(function(e) {
         var curSelect = $(this).parent();

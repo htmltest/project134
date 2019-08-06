@@ -51,15 +51,18 @@ blockquote.success_info p b {font-weight:normal; color:#4e4e4e}
 
 .entry {margin:20px 0 0 0; background:#fff; padding:25px 57px 86px 57px; box-shadow:0px 0px 20px rgba(180, 205, 220, 0.21)}
 .entry h1 {font-weight:500; font-size:28px; line-height:33px; letter-spacing:0.03em; margin:0 -57px; padding:0 57px 22px 57px; border-bottom:1px solid #e1e1e1; color:#1c48a3}
-.entry h1 .profile-btn {margin-left:35px; font-weight:300; margin-top:-4px}
-.entry h1 .cabinet-docs-link {margin-left:35px; font-weight:normal; margin-top:-4px; max-width:none}
-.entry h1 br {display:none}
+.riepp-request-header .profile-btn {margin-left:35px; font-weight:300; margin-top:-4px}
+.riepp-request-header {margin:0 -57px; padding:0 57px 22px 57px; border-bottom:1px solid #e1e1e1}
+.entry .riepp-request-header h1 {display:inline-block; vertical-align:middle; margin:0; padding:0; border-bottom:none}
+.riepp-request-header .cabinet-docs-link {margin-left:35px; font-weight:normal; margin-top:-4px; max-width:none}
 
 @media (max-width:1020px) {
     .entry {padding:25px 20px 75px 20px}
     .entry h1 {margin:0; padding:0; border-bottom:none; font-size:24px; line-height:28px}
-    .entry h1 br {display:block}
-    .entry h1 .cabinet-docs-link {margin:13px 0 0 0}
+    .riepp-request-header {margin:0; padding:0; border-bottom:none}
+    .entry .riepp-request-header h1 {display:block}
+    .entry .riepp-request-header-confirm h1 {display:inline-block}
+    .riepp-request-header .cabinet-docs-link {margin:13px 0 0 0}
 }
 
 .cabinet {padding:31px 0 0 0}
@@ -72,9 +75,9 @@ blockquote.success_info p b {font-weight:normal; color:#4e4e4e}
 .cabinet-content form {margin:0; padding:0}
 
 .entry .cabinet-content table {margin:0}
-.entry .cabinet-content table tr th {color:#393939; font-size:16px; font-weight:500; line-height:19px; padding:18px 30px 16px 30px; letter-spacing:0.03em; text-transform:none; background:rgba(28, 72, 163, 0.06); border:1px solid #e1e1e1}
+.entry .cabinet-content table tr th {color:#393939; font-size:16px; font-weight:500; line-height:19px; padding:18px 20px 16px 20px; letter-spacing:0.03em; text-transform:none; background:rgba(28, 72, 163, 0.06); border:1px solid #e1e1e1}
 .entry .cabinet-content table tr th:first-child {padding-left:20px; padding-right:20px}
-.entry .cabinet-content table tr td {vertical-align:top; font-size:16px; line-height:24px; border:1px solid #e1e1e1; padding:21px 30px 22px 30px; color:#4e4e4e}
+.entry .cabinet-content table tr td {vertical-align:top; font-size:16px; line-height:24px; border:1px solid #e1e1e1; padding:21px 20px 22px 20px; color:#4e4e4e}
 .entry .cabinet-content table tr td:first-child {padding-left:20px; padding-right:20px}
 .entry .cabinet-content table tr td:last-child {border-right:1px solid #e1e1e1 !important}
 .cabinet-content .table_container table tr td:last-child {border-right:1px solid #e1e1e1 !important}
@@ -132,17 +135,21 @@ blockquote.success_info p b {font-weight:normal; color:#4e4e4e}
 .entry .jq-checkbox.checked:hover {border-color:#1c48a3}
 .entry .jq-checkbox.checked:active {border-color:#c1c1c1}
 .entry .jq-checkbox+span+.upload {margin:14px 0 0 0}
+.entry .jq-checkbox+span+input+.upload {margin:14px 0 0 0}
 
 @media (max-width:1020px) {
     .entry .jq-checkbox+span+.upload {margin:30px 0 0 0}
+    .entry .jq-checkbox+span+input+.upload {margin:30px 0 0 0}
 }
 
-.entry .upload {padding:0 0 39px 0; position:relative; min-height:39px; box-sizing:border-box; text-align:left}
+.entry .upload {padding:0 0 39px 0; position:relative; height:39px; box-sizing:border-box; text-align:left}
+.entry .upload-multiple {min-height:39px; height:auto}
 .entry .upload > a {position:absolute; left:0; bottom:0; color:#4e4e4e; width:215px; height:39px; padding:0 0 0 17px; box-sizing:border-box; border:none; background:#f2f4fa; font-size:14px; font-weight:300; line-height:39px; text-align:left; white-space:nowrap; text-overflow:ellipsis; overflow:hidden; cursor:pointer}
 .entry .upload > a::after {content:""; display:block; position:absolute; right:18px; top:11px; width:19px; height:17px; background:url(../images/entry-upload.svg) no-repeat}
 .entry .upload > a:hover {background:#dde4f1; color:#0a0a0a}
 .entry .upload > a:active {background:#f1f4f9; color:#0a0a0a}
-.entry .fu_file {display:inline-block; vertical-align:top; min-width:215px; max-width:255px; height:39px; padding:0; box-sizing:border-box; margin:0 0 10px 0; border:none; background:#f2f4fa; font-size:14px; font-weight:normal; line-height:39px; color:#1c48a3; position:relative; left:auto; top:auto; right:auto; bottom:auto}
+.entry .fu_file {display:inline-block; vertical-align:top; width:215px; height:39px; padding:0; box-sizing:border-box; margin:0 0 10px 0; border:none; background:#f2f4fa; font-size:14px; font-weight:normal; line-height:39px; color:#1c48a3; position:absolute; left:0; top:0; right:0; bottom:0}
+.entry .upload-multiple .fu_file {min-width:215px; max-width:255px; width:auto; position:relative; left:auto; top:auto; right:auto; bottom:auto}
 .entry .fu_file.error {color:rgba(255, 0, 0, 0.75)}
 .entry .fu_file:hover {background:#dde4f1}
 .entry .fu_file:active {background:#f1f4f9}
@@ -233,7 +240,7 @@ blockquote.success_info p b {font-weight:normal; color:#4e4e4e}
 .profile-btn:hover {text-decoration:none; color:#0a0a0a; background:#dde4f1}
 .profile-btn:active {text-decoration:none; color:#0a0a0a; background:#f1f4f9}
 
-.cabinet-expert-requests-score {font-size:18px; font-weight:500; line-height:27px; padding:0 0 0 24px; width:100px; text-align:left; box-sizing:border-box; background:url(../images/cabinet-expert-requests-score.svg) no-repeat left center; color:#2f2f2f}
+.cabinet-expert-requests-score {font-size:18px; font-weight:500; line-height:27px; padding:0 0 0 24px; width:100px; text-align:left; box-sizing:border-box; background:url(../images/cabinet-expert-requests-score.svg) no-repeat left 5px; color:#2f2f2f}
 
 @media (max-width:1020px) {
     .cabinet-expert-requests-score {line-height:39px}
@@ -312,6 +319,12 @@ blockquote.success_info p b {font-weight:normal; color:#4e4e4e}
 
 .expert-request-table .kriteriy, .expert-request-table .kriteriy:hover {background-color:rgba(120, 243, 100, 0.14)}
 
+.expert-request-table-th-1 {width:70px; vertical-align:top; box-sizing:border-box}
+.expert-request-table-th-2 {width:170px; vertical-align:top; box-sizing:border-box}
+.expert-request-table-th-3 {width:auto; vertical-align:top; box-sizing:border-box}
+.expert-request-table-th-4 {width:150px; vertical-align:top; box-sizing:border-box}
+.expert-request-table-th-5 {width:220px; vertical-align:top; box-sizing:border-box}
+
 .kr-score input {display:none}
 .kr-score-radios {font-weight:normal; font-size:14px; line-height:32px; text-align:center; width:160px; color:#4e4e4e}
 .kr-score-radios::after {content:""; display:block; clear:both}
@@ -363,8 +376,8 @@ blockquote.success_info p b {font-weight:normal; color:#4e4e4e}
     .entry .cabinet-content table.expert-request-table tr.expert-request-table-row-summ {display:none}
 }
 
-.riepp-score h1::after {content:""; display:block; clear:both}
-.riepp-score h1 .cabinet-expert-requests-score {display:inline-block; vertical-align:middle; margin:-2px 0 0 25px; color:#1c48a3}
+.riepp-request-header::after {content:""; display:block; clear:both}
+.riepp-request-header .cabinet-expert-requests-score {display:inline-block; vertical-align:middle; margin:-2px 0 0 25px; color:#1c48a3}
 .riepp-score-view-link {display:block; float:right; margin:-4px 0 0 0; height:39px; background:rgba(28, 72, 163, 0.06); padding:0 15px; color:#4e4e4e; font-weight:300; font-size:14px; line-height:39px; white-space:nowrap; box-sizing:border-box}
 .riepp-score-view-link:hover {text-decoration:underline; color:#4e4e4e; background:#dde4f1}
 .riepp-score-view-link:active {text-decoration:none; color:#4e4e4e; background:#f1f4f9}
@@ -377,6 +390,9 @@ blockquote.success_info p b {font-weight:normal; color:#4e4e4e}
 
 @media (max-width:1020px) {
     .riepp-score-view-link {float:left; margin:20px 0 0 0}
+    .entry .riepp-request-header-score h1 {float:left}
+    .riepp-request-header .cabinet-expert-requests-score {float:left; margin-top:-4px}
+    .cabinet-docs-link {clear:left}
 }
 
 .riepp-scores {border:1px solid #e1e1e1; font-size:16px; line-height:24px; font-weight:normal; color:#4e4e4e; position:relative}
