@@ -249,8 +249,18 @@ $(document).ready(function() {
     });
 
     $('.riepp-request-affiliated-select-list label input').change(function() {
-        $('.riepp-request-affiliated-select-value').html($('.riepp-request-affiliated-select-list label input:checked').parent().find('span').html());
-        $('.riepp-request-affiliated-select.open').removeClass('open');
+        var newHTML = '';
+        $('.riepp-request-affiliated-select-list label input:checked').each(function() {
+            if (newHTML != '') {
+                newHTML += ', ';
+            }
+            newHTML += $(this).parent().find('span').html();
+        });
+        if (newHTML == '') {
+            newHTML = $('.riepp-request-affiliated-select-value').data('placeholder');
+        }
+        $('.riepp-request-affiliated-select-value').html(newHTML);
+        $('.riepp-request-affiliated-select-value').attr('title', newHTML);
     });
 
     $('.kr-score-select-list input').styler('destroy');

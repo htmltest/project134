@@ -585,10 +585,14 @@ blockquote.success_info p b {font-weight:normal; color:#4e4e4e}
 .riepp-request-affiliated-select-list label:first-child {border-top:none}
 .riepp-request-affiliated-select-list label input {display:none}
 .riepp-request-affiliated-select-list label label.error {display:none !important}
-.riepp-request-affiliated-select-list label span {display:block; padding:0 12px; position:relative; overflow:hidden; text-overflow:ellipsis; color:#4e4e4e; line-height:37px; font-size:14px; font-weight:300}
+.riepp-request-affiliated-select-list label span {display:block; padding:0 36px 0 12px; position:relative; overflow:hidden; text-overflow:ellipsis; color:#4e4e4e; line-height:37px; font-size:14px; font-weight:300}
 .riepp-request-affiliated-select-list label input:checked+span,
 .riepp-request-affiliated-select-list label input:checked+label.error+span,
 .riepp-request-affiliated-select-list label span:hover {background:rgba(28, 72, 163, 0.06)}
+.riepp-request-affiliated-select-list label input:checked+span,
+.riepp-request-affiliated-select-list label input:checked+label.error+span {font-weight:bold}
+.riepp-request-affiliated-select-list label input:checked+span::after,
+.riepp-request-affiliated-select-list label input:checked+label.error+span::after {content:""; display:block; position:absolute; right:12px; top:50%; width:12px; height:12px; margin-top:-6px; background:url(../images/riepp-request-affiliated-select-checked.svg) no-repeat}
 
 @media (max-width:1020px) {
     .riepp-request-affiliated-select {width:100%}
@@ -626,3 +630,5 @@ blockquote.success_info p b {font-weight:normal; color:#4e4e4e}
 @media (max-width:1020px) {
     .kr-score-select {width:100%}
 }
+
+.top_user > a {display:inline-block; position:relative; overflow:hidden; white-space:nowrap; text-overflow:ellipsis; max-width:200px; line-height:19px; vertical-align:middle}
