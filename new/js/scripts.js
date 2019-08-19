@@ -280,6 +280,37 @@ $(document).ready(function() {
         }
     });
 
+    $('#form-sub-send-new').each(function() {
+        var curForm = $(this).parents().filter('form');
+        var apiValid = curForm.validate();
+        apiValid.destroy();
+        curForm.validate({
+            ignore: '',
+            showErrors: function(errorMap, errorList) {
+                this.defaultShowErrors();
+                $('.kr-score-select input.error').eq(0).each(function() {
+                    var curSelect = $(this).parents().filter('.kr-score-select');
+                    $('html, body').animate({'scrollTop': curSelect.offset().top - 180});
+                });
+            }
+        });
+
+        window.setInterval(function() {
+            var curStatus = true;
+            $('.kr-score-select').each(function() {
+                var curSelect = $(this);
+                if (curSelect.find('input:checked').length == 0 || curSelect.find('input.error').length > 0) {
+                    curStatus = false;
+                }
+            });
+            if (curStatus) {
+                $('.expert-request-score-alert').hide();
+            } else {
+                $('.expert-request-score-alert').show();
+            }
+        }, 100);
+    });
+
     $('.kr-score-select-list label input').change(function() {
         var curSelect = $(this).parents().filter('.kr-score-select');
         curSelect.find('.kr-score-select-value').html(curSelect.find('.kr-score-select-list label input:checked').parent().find('span').html());

@@ -1017,15 +1017,23 @@
             <div class="expert-request-score-window">
                 <div class="expert-request-score-window-title">Московский центр математических исследований</div>
                 <div class="expert-request-score-window-value">Сумарная оценка: <span class="SUMM_ALL"></span></div>
+                <div class="expert-request-score-window-ctrl">
+                    <input class="btn btn_sm" type="submit" value="Сохранить" />
+                    <input class="btn btn_sm red" type="submit" value="Отправить" />
+                </div>
             </div>
 
 
 			<input type="hidden" name="id" value="294">
             <div class="expert-request-ctrl">
 				<div class="form_sub">
-                    <input class="btn btn_sm red" type="submit" name="send_ok" id="form-sub-send" value="Отправить">
+                    <input class="btn btn_sm" type="submit" name="save_ok" id="form-sub-save" value="Сохранить оценки" />
+					&nbsp;&nbsp;&nbsp;
+                    <input class="btn btn_sm red" type="submit" name="send_ok" id="form-sub-send-new" value="Отправить">
+                    <div class="expert-request-score-alert">Для отправки нужно выставить все оценки</div>
 				</div>
-				<div class="expert-request-ctrl-notice">После отправки редактирование<br /> невозможно</div>
+				<div class="expert-request-ctrl-notice">После отправки редактирование невозможно</div>
+
             </div>
 			</form>
 
