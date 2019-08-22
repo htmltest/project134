@@ -295,6 +295,12 @@ $(document).ready(function() {
             }
         });
 
+        $('body').on('click', '#form-sub-save-window', function(e) {
+            var curForm = $(this).parents().filter('form');
+            curForm.find('#form-sub-save').trigger('click');
+            e.preventDefault();
+        });
+
         window.setInterval(function() {
             var curStatus = true;
             $('.kr-score-select').each(function() {
