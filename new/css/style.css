@@ -54,7 +54,7 @@ blockquote.success_info p b {font-weight:normal; color:#4e4e4e}
 .riepp-request-header .profile-btn {margin-left:35px; font-weight:300; margin-top:-4px}
 .riepp-request-header {margin:0 -57px; padding:0 57px 22px 57px; border-bottom:1px solid #e1e1e1}
 .entry .riepp-request-header h1 {display:inline-block; vertical-align:middle; margin:0; padding:0; border-bottom:none}
-.riepp-request-header .cabinet-docs-link {margin-left:35px; font-weight:normal; margin-top:-4px; max-width:none}
+.riepp-request-header .cabinet-docs-link {margin-left:35px; font-weight:normal; margin-top:-4px; max-width:none; margin-bottom:0}
 
 @media (max-width:1020px) {
     .entry {padding:25px 20px 75px 20px}
@@ -252,7 +252,7 @@ blockquote.success_info p b {font-weight:normal; color:#4e4e4e}
     .cabinet-expert-requests-title {padding:0}
 }
 
-.cabinet-docs-link {display:inline-block; vertical-align:top; height:39px; background:rgba(28, 72, 163, 0.06); padding:0 15px; color:#1c48a3; font-weight:300; font-size:14px; line-height:39px; white-space:nowrap; text-overflow:ellipsis; max-width:271px; position:relative; overflow:hidden; box-sizing:border-box}
+.cabinet-docs-link {display:inline-block; vertical-align:top; height:39px; background:rgba(28, 72, 163, 0.06); padding:0 15px; margin:0 0 10px 0; color:#1c48a3; font-weight:300; font-size:14px; line-height:39px; white-space:nowrap; text-overflow:ellipsis; max-width:271px; position:relative; overflow:hidden; box-sizing:border-box}
 .cabinet-docs-link::before {content:""; display:inline-block; vertical-align:middle; width:11px; height:14px; background:url(../images/cabinet-docs-link.svg) no-repeat; margin:-2px 9px 0 0}
 .cabinet-docs-link:hover {text-decoration:underline; color:#1c48a3; background:#dde4f1}
 .cabinet-docs-link:active {text-decoration:none; color:#1c48a3; background:#f1f4f9}
