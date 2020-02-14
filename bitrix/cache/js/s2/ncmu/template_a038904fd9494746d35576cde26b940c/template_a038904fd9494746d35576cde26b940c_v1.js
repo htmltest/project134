@@ -22,7 +22,7 @@ padding:"inner"+a,content:b,"":"outer"+a},function(c,d){n.fn[d]=function(d,e){va
  * Thanks to: Seamus Leahy for adding deltaX and deltaY
  *
  * Version: 3.0.6
- * 
+ *
  * Requires: 1.2.2+
  */
 (function(d){function e(a){var b=a||window.event,c=[].slice.call(arguments,1),f=0,e=0,g=0,a=d.event.fix(b);a.type="mousewheel";b.wheelDelta&&(f=b.wheelDelta/120);b.detail&&(f=-b.detail/3);g=f;b.axis!==void 0&&b.axis===b.HORIZONTAL_AXIS&&(g=0,e=-1*f);b.wheelDeltaY!==void 0&&(g=b.wheelDeltaY/120);b.wheelDeltaX!==void 0&&(e=-1*b.wheelDeltaX/120);c.unshift(a,f,e,g);return(d.event.dispatch||d.event.handle).apply(this,c)}var c=["DOMMouseScroll","mousewheel"];if(d.event.fixHooks)for(var h=c.length;h;)d.event.fixHooks[c[--h]]=
@@ -5094,7 +5094,7 @@ jQuery(document).ready(function(){
 		return false;
 	});
 	jQuery(document).click( function(event){
-		if( jQuery(event.target).closest(".top_search").length ) 
+		if( jQuery(event.target).closest(".top_search").length )
 		return;
 		jQuery(".search").removeClass('open');
 		event.stopPropagation();
@@ -5119,7 +5119,7 @@ jQuery(document).ready(function(){
 	jQuery('.maskPhone').inputmask('9(999)9999999');
 
   jQuery(".validate").validate({ignore: ''});
-	
+
   jQuery('.slider').slick({
 		dots: true,
 		arrows: true,
@@ -5146,7 +5146,7 @@ jQuery(document).ready(function(){
         jQuery(this).fileupload({
             dropZone: jQuery(this),
             add: function (e, data) {
-                data.url = '/local/ajax/request.file.upload.php';
+                data.url = 'local/ajax/request.file.upload.php';
                 var tpl = jQuery('<div class="fu_file working"><div class="progress"></div><p></p><span></span><input type="text" name="" value="" /></div>');
                 var th = jQuery(this);
                 tpl.find('p').text(data.files[0].name);
@@ -5174,13 +5174,13 @@ jQuery(document).ready(function(){
             progress: function(e, data){
                 var progress = parseInt(data.loaded / data.total * 100, 10);
                 if(progress == 100){
-                    data.context.removeClass('working');
                 }
                 data.context.find('.progress').css(
                     'width', progress + '%'
                 );
             },
             done:function(e, data){
+                    data.context.removeClass('working');
                 var result = jQuery.parseJSON(data.result);
                 if (result.status == 'success') {
 //                    data.context.parent().find('input[type="hidden"]').val(result.path);
@@ -5195,14 +5195,21 @@ jQuery(document).ready(function(){
                     data.context.parent().find('input[type="hidden"]').val(paths);
                     data.context.find('input[type="text"]').attr('name', result.name);
                     data.context.find('input[type="text"]').val(result.value);
-
+                    data.context.find('label.error').remove();
+                    data.context.removeClass('error');
+                    data.context.addClass('success');
 				}
                 else{
                     data.context.addClass('error');
+                    if (result.message) {
+                        data.context.find('label.error').remove();
+                        data.context.append('<label class="error">' + result.message + '</label>');
+                    }
                 }
             },
             fail:function(e, data){
                 data.context.addClass('error');
+                data.context.append('<label class="error">Ошибка загрузки файла</label>');
             }
         });
     });
@@ -5264,7 +5271,7 @@ jQuery(document).ready(function(){
 
 
 
-	jQuery('.go_slow').click(function () { 
+	jQuery('.go_slow').click(function () {
 		elementClick = this.hash;
 		destination = jQuery(elementClick).offset().top;
 		jQuery('body,html').animate( { scrollTop: destination }, 300 );
@@ -5289,7 +5296,7 @@ jQuery(document).ready(function(){
 				jQuery(this).addClass('fancybox').attr('rel','fancybox').getTitle();
 			}
 		}
-	});  
+	});
 	jQuery('a.fancybox').fancybox({
 		'padding': 2,
 		'overlayColor': '#000000',
@@ -5367,7 +5374,7 @@ $(document).ready(function(){
 			$('.hide-f input').removeClass('required');
 		}
     });
-	
+
 });
 /* End */
 ;; /* /local/layout/js/jquery-1.12.4.min.js?152682867797163*/

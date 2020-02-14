@@ -149,11 +149,15 @@ blockquote.success_info p b {font-weight:normal; color:#4e4e4e}
 .entry .upload > a:hover {background:#dde4f1; color:#0a0a0a}
 .entry .upload > a:active {background:#f1f4f9; color:#0a0a0a}
 .entry .fu_file {display:inline-block; vertical-align:top; width:215px; height:39px; padding:0; box-sizing:border-box; margin:0 0 10px 0; border:none; background:#f2f4fa; font-size:14px; font-weight:normal; line-height:39px; color:#1c48a3; position:absolute; left:0; top:0; right:0; bottom:0}
+.entry .fu_file.error {margin-bottom:25px}
 .entry .upload-multiple .fu_file {min-width:215px; max-width:255px; width:auto; position:relative; left:auto; top:auto; right:auto; bottom:auto}
 .entry .fu_file.error {color:rgba(255, 0, 0, 0.75)}
 .entry .fu_file:hover {background:#dde4f1}
 .entry .fu_file:active {background:#f1f4f9}
 .entry .fu_file .progress {height:39px; background:#f2f4fa}
+.entry .fu_file.error .progress {background:#ffe5e5}
+.entry .fu_file.working .progress {background:url(../images/progressbar.gif) repeat-x; background-size:auto 100%}
+.entry .fu_file.success .progress {background:rgba(120, 243, 100, 0.14)}
 .entry .fu_file p {transform:none; top:auto; position:relative; margin:0; padding:0 30px 0 17px; color:#1c48a3; font-size:14px; line-height:39px; text-align:left; white-space:nowrap; text-overflow:ellipsis; overflow:hidden}
 .entry .fu_file.error p {color:rgba(255, 0, 0, 0.75)}
 .entry .fu_file a {display:block; color:#1c48a3; background:none; padding:0 30px 0 17px; margin:0 -30px 0 -17px; font-size:14px; line-height:39px; text-align:left; white-space:nowrap; text-overflow:ellipsis; overflow:hidden; position:relative}
