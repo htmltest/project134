@@ -238,6 +238,7 @@ $(document).ready(function() {
         if (curSelect.hasClass('open')) {
             curSelect.removeClass('open');
         } else {
+            $('.riepp-request-affiliated-select.open').removeClass('open');
             curSelect.addClass('open');
         }
     });
@@ -249,18 +250,22 @@ $(document).ready(function() {
     });
 
     $('.riepp-request-affiliated-select-list label input').change(function() {
+        var curSelect = $(this).parents().filter('.riepp-request-affiliated-select');
         var newHTML = '';
-        $('.riepp-request-affiliated-select-list label input:checked').each(function() {
+        curSelect.find('.riepp-request-affiliated-select-list label input:checked').each(function() {
             if (newHTML != '') {
                 newHTML += ', ';
             }
             newHTML += $(this).parent().find('span').html();
         });
         if (newHTML == '') {
-            newHTML = $('.riepp-request-affiliated-select-value').data('placeholder');
+            newHTML = curSelect.find('.riepp-request-affiliated-select-value').data('placeholder');
         }
-        $('.riepp-request-affiliated-select-value').html(newHTML);
-        $('.riepp-request-affiliated-select-value').attr('title', newHTML);
+        curSelect.find('.riepp-request-affiliated-select-value').html(newHTML);
+        curSelect.find('.riepp-request-affiliated-select-value').attr('title', newHTML);
+        if ($(this).attr('type') === 'radio') {
+            curSelect.removeClass('open');
+        }
     });
 
     $('.kr-score-select-list input').styler('destroy');

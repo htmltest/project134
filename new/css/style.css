@@ -595,8 +595,8 @@ blockquote.success_info p b {font-weight:normal; color:#4e4e4e}
 .riepp-request-affiliated-select-list label span:hover {background:rgba(28, 72, 163, 0.06)}
 .riepp-request-affiliated-select-list label input:checked+span,
 .riepp-request-affiliated-select-list label input:checked+label.error+span {font-weight:bold}
-.riepp-request-affiliated-select-list label input:checked+span::after,
-.riepp-request-affiliated-select-list label input:checked+label.error+span::after {content:""; display:block; position:absolute; right:12px; top:50%; width:12px; height:12px; margin-top:-6px; background:url(../images/riepp-request-affiliated-select-checked.svg) no-repeat}
+.riepp-request-affiliated-select-list label input[type="checkbox"]:checked+span::after,
+.riepp-request-affiliated-select-list label input[type="checkbox"]:checked+label.error+span::after {content:""; display:block; position:absolute; right:12px; top:50%; width:12px; height:12px; margin-top:-6px; background:url(../images/riepp-request-affiliated-select-checked.svg) no-repeat}
 
 @media (max-width:1020px) {
     .riepp-request-affiliated-select {width:100%}
@@ -650,3 +650,8 @@ blockquote.success_info p b {font-weight:normal; color:#4e4e4e}
 .entry .expert-request-score-window-ctrl .btn.btn_sm.red {background:#1d36b4; border:none; color:#fff; margin:0 0 0 8px}
 .entry .expert-request-score-window-ctrl .btn.btn_sm.red:hover {background:#2f4cdb; color:#fff}
 .entry .expert-request-score-window-ctrl .btn.btn_sm.red:active {background:#1d36b4; color:#fff}
+
+
+.inp {border:1px solid #afbfde; background:#f1f4f9; color:#4e4e4e; font-size:14px; line-height:21px; height:39px; font-weight:300; padding:8px 12px}
+.inp:focus {border-color:#1d36b4}
+textarea.inp {height:auto}
