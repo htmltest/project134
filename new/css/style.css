@@ -655,3 +655,5 @@ blockquote.success_info p b {font-weight:normal; color:#4e4e4e}
 .cabinet .inp {border:1px solid #afbfde; background:#f1f4f9; color:#4e4e4e; font-size:14px; line-height:21px; height:39px; font-weight:300; padding:8px 12px}
 .cabinet .inp:focus {border-color:#1d36b4}
 .cabinet textarea.inp {height:auto}
+
+.upload label.error {white-space:nowrap}
