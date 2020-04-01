@@ -118,11 +118,13 @@ footer {
 	}
 
 .logo_bot{
-	padding: 0 0 0 10px;
+	padding: 4x 0 0 10px;
 	}
 
 .copy{
-	padding: 13px 0 0 16px;
+	padding: 4px 0 0 16px;
+    font-size: 16px; line-height: 24px;
+    width: 270px;
 	}
 
 .nav_bot{

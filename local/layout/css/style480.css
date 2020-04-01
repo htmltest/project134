@@ -394,11 +394,12 @@ footer {
 	}
 
 .logo_bot{
-	padding: 0 0 0 15px;
+	padding: 4px 0 0 15px;
 	}
 
 .show_bot_nav{
 	display: block;
+    margin-top: 22px;
 	}
 
 .nav_bot{
