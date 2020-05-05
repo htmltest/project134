@@ -297,6 +297,10 @@ $(document).ready(function() {
                     var curSelect = $(this).parents().filter('.kr-score-select');
                     $('html, body').animate({'scrollTop': curSelect.offset().top - 180});
                 });
+                $('.kr-score-new input.error').eq(0).each(function() {
+                    var curSelect = $(this).parents().filter('.kr-score-new');
+                    $('html, body').animate({'scrollTop': curSelect.offset().top - 180});
+                });
             }
         });
 
@@ -344,6 +348,49 @@ $(document).ready(function() {
     if ($('.kr-score-select').length > 0) {
         window.setInterval(function() {
             $('.kr-score-select').each(function() {
+                var curSelect = $(this);
+                curSelect.find('> label.error').remove();
+                if (curSelect.find('input.error').length > 0) {
+                    curSelect.append('<label class="error">Это поле необходимо заполнить.</label>');
+                }
+            });
+        }, 100);
+    }
+
+    $('.kr-score-new input').change(function() {
+        var curSelect = $(this).parents().filter('.kr-score-new');
+        var summ_b = 0;
+        $('.kr-score-new').each(function() {
+            var curValue = Number($(this).find('input').val());
+            summ_b += curValue;
+        });
+        $('.SUMM_ALL').html(summ_b);
+        $('.SUMM_B_ALL').html(summ_b);
+        $('.kr-score-new-summ-kr').each(function() {
+            var curKR = $(this).attr('data-kr');
+            var curSumm = 0;
+            $('.kr-score-new input[data-kr="' + curKR + '"]').each(function() {
+                var curValue = Number($(this).val());
+                curSumm += curValue;
+            });
+            $(this).html(curSumm);
+        });
+        $('.kr-score-new-summ-group').each(function() {
+            var curGROUP = $(this).attr('data-group');
+            var curSumm = 0;
+            $('.kr-score-new input[data-group="' + curGROUP + '"]').each(function() {
+                var curValue = Number($(this).val());
+                curSumm += curValue;
+            });
+            $(this).html(curSumm);
+        });
+        $(this).removeClass('error');
+        curSelect.find('label.error').remove();
+    });
+
+    if ($('.kr-score-new').length > 0) {
+        window.setInterval(function() {
+            $('.kr-score-new').each(function() {
                 var curSelect = $(this);
                 curSelect.find('> label.error').remove();
                 if (curSelect.find('input.error').length > 0) {

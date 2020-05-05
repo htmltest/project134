@@ -355,9 +355,24 @@ blockquote.success_info p b {font-weight:normal; color:#4e4e4e}
 .kr-score-radio:nth-child(4).active {background:#d1fbca}
 .kr-score-radio:nth-child(5).active {background:#d1fbca}
 
+.kr-score-new .kr-score-radios {width:300px}
+.kr-score-new .kr-score-radio {border:1px solid #e1e1e1; margin:0 -1px 0 0; box-sizing:border-box}
+.kr-score-new .kr-score-radio.active,
+.kr-score-new .kr-score-radio:hover {z-index:1; border-color:rgba(28, 72, 163, 0.44)}
+.kr-score-new .kr-score-radio:nth-child(even) {background:#f1f4f9}
+.kr-score-new .kr-score-radio:hover::after {display:none}
+.kr-score-new .kr-score-radio.active::after {display:none}
+.kr-score-new .kr-score-radio.active {background:rgba(28, 72, 163, 0.44); color:#fff}
+.kr-score-new input.error+label.error {display:none !important}
+
+.kr-score-new-summ-group,
+.kr-score-new-summ-kr {font-weight:bold}
+
 @media (max-width:1020px) {
     .kr-score-radios {margin:23px 0 0 0}
 }
+
+.indicator-text {font-weight:300}
 
 .expert-request-ctrl {margin:44px 0 0 0}
 .expert-request-ctrl::after {content:""; display:block; clear:both}
@@ -661,6 +676,7 @@ blockquote.success_info p b {font-weight:normal; color:#4e4e4e}
 }
 
 .expert-request-score-window-ctrl {text-align:center; border-top:1px solid #eee; padding:10px 0 0 0; margin:10px 0 0 0}
+.expert-request-score-window-ctrl .btn {transition-property:background, color}
 .entry .expert-request-score-window-ctrl .btn.btn_sm {min-height:0; height:32px; padding:0 20px; border:1px solid #1c48a3; background:#fff; color:#4e4e4e; font-weight:300; line-height:30px; font-size:12px; text-transform:none; width:auto}
 .entry .expert-request-score-window-ctrl .btn.btn_sm:hover {background:#dde4f1; color:#4e4e4e}
 .entry .expert-request-score-window-ctrl .btn.btn_sm:active {background:#fff; color:#4e4e4e}
