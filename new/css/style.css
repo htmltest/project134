@@ -374,6 +374,8 @@ blockquote.success_info p b {font-weight:normal; color:#4e4e4e}
 
 .indicator-text {font-weight:300}
 
+.entry .cabinet-content table tr.indicator-disabled td {color:#bbb}
+
 .expert-request-ctrl {margin:44px 0 0 0}
 .expert-request-ctrl::after {content:""; display:block; clear:both}
 .expert-request-ctrl .form_sub {margin:0; float:right; position:relative}
@@ -780,3 +782,25 @@ textarea.inp_typography {height:232px}
 .typography .form_line_cb label .jq-checkbox {position:absolute; left:0; top:2px; margin:0}
 
 .cabinet-content-checkbox+.cabinet-content-checkbox {margin:10px 0 0 0}
+
+.hint {display:inline-block; vertical-align:middle; position:relative; margin:-2px 0 0 2px; cursor:default}
+.hint:hover {z-index:99}
+.hint-icon {width:20px; height:20px; border:1px solid #e2e2e2; text-align:center; font-size:14px; line-height:20px; color:#000; border-radius:50%; box-sizing:border-box}
+.hint-text {display:none; position:absolute; left:50%; bottom:39px; transform:translateX(-50%); background:#fff; border:1px solid #e2e2e2; box-shadow:3px 9px 20px rgba(0, 0, 0, 0.11); z-index:99; font-size:14px; line-height:21px; color:#353535; padding:12px 16px; width:400px; box-sizing:border-box}
+@media screen and (min-width:1021px) {
+    .hint:hover .hint-text {display:block}
+}
+.hint-text::before {content:""; display:block; position:absolute; left:0; right:0; bottom:-39px; height:39px; background:url(../images/blank.gif)}
+.hint-text::after {content:""; display:block; width:14px; height:14px; background:#fff; border-left:1px solid #e2e2e2; border-bottom:1px solid #e2e2e2; transform:rotate(-45deg); position:absolute; left:50%; bottom:-8px; margin-left:-7px; box-sizing:border-box}
+.hint-close {display:none}
+
+@media screen and (max-width:1020px) {
+    .hint {cursor:pointer}
+    .hint-text {left:0; right:0; top:0; bottom:0; transform:none; font-size:20px; line-height:30px; position:fixed; z-index:9999; width:auto; padding:40px 20px 20px 20px; overflow:auto}
+    .hint.open .hint-text {display:block}
+    .hint-text::before {display:none}
+    .hint-text::after {display:none}
+    .hint-close {display:block; position:absolute; right:10px; top:10px; width:20px; height:20px; background:url(../images/time_info-close.svg) no-repeat; cursor:pointer}
+}
+
+.indicator-text .success_info {background:#fafbbf}

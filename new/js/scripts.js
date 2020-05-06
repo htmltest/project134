@@ -400,6 +400,14 @@ $(document).ready(function() {
         }, 100);
     }
 
+    $('.hint-icon').click(function() {
+        $(this).parent().addClass('open');
+    });
+
+    $('.hint-close').click(function() {
+        $(this).parent().parent().removeClass('open');
+    });
+
 });
 
 $(window).on('load resize scroll', function() {
