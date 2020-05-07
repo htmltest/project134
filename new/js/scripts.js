@@ -400,6 +400,12 @@ $(document).ready(function() {
         }, 100);
     }
 
+    $('.kr-score-new input[value!=""]').each(function() {
+        var curInput = $(this);
+        curInput.trigger('change');
+        curInput.parent().find('.kr-score-radio:contains("' + curInput.val() + '")').addClass('active');
+    });
+
     $('.hint-icon').click(function() {
         $(this).parent().addClass('open');
     });
