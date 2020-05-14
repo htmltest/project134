@@ -299,7 +299,6 @@ $(document).ready(function() {
                 });
                 $('.kr-score-new input.error').eq(0).each(function() {
                     var curSelect = $(this).parents().filter('.kr-score-new');
-                    $('html, body').animate({'scrollTop': curSelect.offset().top - 180});
                 });
             }
         });
@@ -361,27 +360,36 @@ $(document).ready(function() {
         var curSelect = $(this).parents().filter('.kr-score-new');
         var summ_b = 0;
         $('.kr-score-new').each(function() {
-            var curValue = Number($(this).find('input').val());
+            var curValue = Number($(this).find('input').val().replace(',', '.'));
             summ_b += curValue;
         });
+        if (String(summ_b).indexOf('.') != -1) {
+            summ_b = summ_b.toFixed(1);
+        }
         $('.SUMM_ALL').html(summ_b);
         $('.SUMM_B_ALL').html(summ_b);
         $('.kr-score-new-summ-kr').each(function() {
             var curKR = $(this).attr('data-kr');
             var curSumm = 0;
             $('.kr-score-new input[data-kr="' + curKR + '"]').each(function() {
-                var curValue = Number($(this).val());
+                var curValue = Number($(this).val().replace(',', '.'));
                 curSumm += curValue;
             });
+            if (String(curSumm).indexOf('.') > -1) {
+                curSumm = curSumm.toFixed(1);
+            }
             $(this).html(curSumm);
         });
         $('.kr-score-new-summ-group').each(function() {
             var curGROUP = $(this).attr('data-group');
             var curSumm = 0;
             $('.kr-score-new input[data-group="' + curGROUP + '"]').each(function() {
-                var curValue = Number($(this).val());
+                var curValue = Number($(this).val().replace(',', '.'));
                 curSumm += curValue;
             });
+            if (String(curSumm).indexOf('.') > -1) {
+                curSumm = curSumm.toFixed(1);
+            }
             $(this).html(curSumm);
         });
         $(this).removeClass('error');
@@ -390,7 +398,7 @@ $(document).ready(function() {
 
     if ($('.kr-score-new').length > 0) {
         window.setInterval(function() {
-            $('.kr-score-new').each(function() {
+            $('.kr-score-new:not(.kr-score-float)').each(function() {
                 var curSelect = $(this);
                 curSelect.find('> label.error').remove();
                 if (curSelect.find('input.error').length > 0) {
@@ -399,6 +407,59 @@ $(document).ready(function() {
             });
         }, 100);
     }
+
+    $('input.inp-score-float').mask('XSZ', {
+        translation: {
+            'X': {
+                pattern: /[0-9]/
+            },
+            'S': {
+                pattern: /\.|\,/, optional: true
+            },
+            'Z': {
+                pattern: /[0-9]/, optional: true
+            }
+        }
+    });
+
+    $.validator.addMethod('inp-score-float',
+        function(score, element) {
+            var curValue = parseFloat(score.replace(',', '.'));
+            console.log(curValue);
+            var curMin = parseInt($(element).attr('data-min'));
+            var curMax = parseInt($(element).attr('data-max'));
+            return this.optional(element) || (curValue >= curMin && curValue <= curMax);
+        },
+        'Оценка должна быть от 0 до 3'
+    );
+
+    $('.kr-score-float-dec').click(function(e) {
+        var curField = $(this).parent();
+        var curValue = Number(curField.find('input').val().replace(',', '.'));
+        var curStep = parseFloat(curField.find('input').attr('data-step'));
+        var curMin = parseInt(curField.find('input').attr('data-min'));
+        curValue = curValue - curStep;
+        if (curValue < curMin) {
+            curValue = curMin;
+        }
+        curValue = curValue.toFixed(1);
+        curField.find('input').val(curValue).trigger('change');
+        e.preventDefault();
+    });
+
+    $('.kr-score-float-inc').click(function(e) {
+        var curField = $(this).parent();
+        var curValue = Number(curField.find('input').val().replace(',', '.'));
+        var curStep = parseFloat(curField.find('input').attr('data-step'));
+        var curMax = parseInt(curField.find('input').attr('data-max'));
+        curValue = curValue + curStep;
+        if (curValue > curMax) {
+            curValue = curMax;
+        }
+        curValue = curValue.toFixed(1);
+        curField.find('input').val(curValue).trigger('change');
+        e.preventDefault();
+    });
 
     $('.kr-score-new input[value!=""]').each(function() {
         var curInput = $(this);
