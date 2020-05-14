@@ -363,8 +363,9 @@ $(document).ready(function() {
             var curValue = Number($(this).find('input').val().replace(',', '.'));
             summ_b += curValue;
         });
+        console.log(summ_b);
         if (String(summ_b).indexOf('.') != -1) {
-            summ_b = summ_b.toFixed(1);
+            summ_b = summ_b.toFixed(2);
         }
         $('.SUMM_ALL').html(summ_b);
         $('.SUMM_B_ALL').html(summ_b);
@@ -376,7 +377,7 @@ $(document).ready(function() {
                 curSumm += curValue;
             });
             if (String(curSumm).indexOf('.') > -1) {
-                curSumm = curSumm.toFixed(1);
+                curSumm = curSumm.toFixed(2);
             }
             $(this).html(curSumm);
         });
@@ -388,7 +389,7 @@ $(document).ready(function() {
                 curSumm += curValue;
             });
             if (String(curSumm).indexOf('.') > -1) {
-                curSumm = curSumm.toFixed(1);
+                curSumm = curSumm.toFixed(2);
             }
             $(this).html(curSumm);
         });
@@ -408,7 +409,7 @@ $(document).ready(function() {
         }, 100);
     }
 
-    $('input.inp-score-float').mask('XSZ', {
+    $('input.inp-score-float').mask('XSZZ', {
         translation: {
             'X': {
                 pattern: /[0-9]/
@@ -425,7 +426,6 @@ $(document).ready(function() {
     $.validator.addMethod('inp-score-float',
         function(score, element) {
             var curValue = parseFloat(score.replace(',', '.'));
-            console.log(curValue);
             var curMin = parseInt($(element).attr('data-min'));
             var curMax = parseInt($(element).attr('data-max'));
             return this.optional(element) || (curValue >= curMin && curValue <= curMax);
@@ -442,7 +442,7 @@ $(document).ready(function() {
         if (curValue < curMin) {
             curValue = curMin;
         }
-        curValue = curValue.toFixed(1);
+        curValue = curValue.toFixed(2);
         curField.find('input').val(curValue).trigger('change');
         e.preventDefault();
     });
@@ -456,7 +456,7 @@ $(document).ready(function() {
         if (curValue > curMax) {
             curValue = curMax;
         }
-        curValue = curValue.toFixed(1);
+        curValue = curValue.toFixed(2);
         curField.find('input').val(curValue).trigger('change');
         e.preventDefault();
     });

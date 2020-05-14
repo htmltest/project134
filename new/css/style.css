@@ -378,11 +378,18 @@ blockquote.success_info p b {font-weight:normal; color:#4e4e4e}
 .kr-score-float input {width:100%; display:block; position:relative; left:auto; top:auto; visibility:visible; z-index:1}
 .kr-score-float-inc,
 .kr-score-float-dec {display:block; position:absolute; right:0; width:20px; height:20px; text-decoration:none; border:1px solid #afbfde; background:#f1f4f9; color:#000; text-decoration:none; box-sizing:border-box; text-align:center; line-height:18px; font-size:16px; font-weight:300}
-.kr-score-float-dec {bottom:0; font-size:20px}
+.kr-score-float-dec {top:19px; font-size:20px}
 .kr-score-float-inc {top:0}
 .kr-score-float-inc:hover,
 .kr-score-float-dec:hover {border-color:#1d36b4; color:#000; text-decoration:none; z-index:2}
 .kr-score-float label.error {white-space:nowrap}
+
+@media (max-width:1020px) {
+    .kr-score-float {padding:0 38px; width:203px}
+    .kr-score-float-dec {right:auto; left:0; top:0; font-size:30px; width:39px; height:39px; line-height:37px}
+    .kr-score-float-inc {font-size:20px; width:39px; height:39px; line-height:37px}
+    .kr-score-float label.error {margin-left:-39px}
+}
 
 .indicator-text {font-weight:300}
 
