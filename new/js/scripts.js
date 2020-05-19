@@ -291,6 +291,7 @@ $(document).ready(function() {
         apiValid.destroy();
         curForm.validate({
             ignore: '',
+            onkeyup: false,
             showErrors: function(errorMap, errorList) {
                 this.defaultShowErrors();
                 $('.kr-score-select input.error').eq(0).each(function() {
@@ -299,6 +300,7 @@ $(document).ready(function() {
                 });
                 $('.kr-score-new input.error').eq(0).each(function() {
                     var curSelect = $(this).parents().filter('.kr-score-new');
+                    $('html, body').animate({'scrollTop': curSelect.offset().top - 180});
                 });
             }
         });
