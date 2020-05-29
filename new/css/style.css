@@ -632,13 +632,13 @@ blockquote.success_info p b {font-weight:normal; color:#4e4e4e}
 .riepp-request-affiliated-select.open {z-index:19}
 .riepp-request-affiliated-select-value {border:1px solid #afbfde; background:rgba(28, 72, 163, 0.06); padding:0 41px 0 12px; color:#4e4e4e; font-size:14px; line-height:37px; height:39px; white-space:nowrap; font-weight:300; overflow:hidden; position:relative; text-overflow:ellipsis; box-sizing:border-box; cursor:pointer}
 .riepp-request-affiliated-select-value::after {content:""; display:block; width:13px; height:8px; background:url(../images/riepp-request-affiliated-select.svg) no-repeat; position:absolute; right:14px; top:15px}
-.riepp-request-affiliated-select-list {display:none; position:absolute; left:0; top:100%; margin-top:-1px; width:100%; box-sizing:border-box; white-space:nowrap; background:#fff; border:1px solid #afbfde; max-height:250px; overflow:auto}
+.riepp-request-affiliated-select-list {display:none; position:absolute; left:0; top:100%; margin-top:-1px; width:100%; box-sizing:border-box; background:#fff; border:1px solid #afbfde; max-height:250px; overflow:auto}
 .riepp-request-affiliated-select.open .riepp-request-affiliated-select-list {display:block}
 .riepp-request-affiliated-select-list label {border-top:1px solid #afbfde; display:block; cursor:pointer}
 .riepp-request-affiliated-select-list label:first-child {border-top:none}
 .riepp-request-affiliated-select-list label input {display:none}
 .riepp-request-affiliated-select-list label label.error {display:none !important}
-.riepp-request-affiliated-select-list label span {display:block; padding:0 36px 0 12px; position:relative; overflow:hidden; text-overflow:ellipsis; color:#4e4e4e; line-height:37px; font-size:14px; font-weight:300}
+.riepp-request-affiliated-select-list label span {display:block; padding:8px 36px 8px 12px; position:relative; overflow:hidden; text-overflow:ellipsis; color:#4e4e4e; line-height:21px; font-size:14px; font-weight:300}
 .riepp-request-affiliated-select-list label input:checked+span,
 .riepp-request-affiliated-select-list label input:checked+label.error+span,
 .riepp-request-affiliated-select-list label span:hover {background:rgba(28, 72, 163, 0.06)}
