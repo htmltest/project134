@@ -306,7 +306,7 @@ $(document).ready(function() {
                     var curItem = curCriterion.items[k];
                     var curItemScore = 0;
                     var curItemScoreCount = 0;
-                    if (curItem.scores !== undefined) {
+                    if (curItem.scores !== undefined && (curItem.noscores === undefined || !curItem.noscores)) {
                         for (var m = 0; m < curItem.scores.length; m++) {
                             if (curItem.scores[m].not === undefined || !curItem.scores[m].not) {
                                 curItemScore += Number(curItem.scores[m].score);
@@ -323,7 +323,7 @@ $(document).ready(function() {
                     if (String(curItemScore).indexOf('.') != -1) {
                         curItemScore = curItemScore.toFixed(2);
                     }
-                    if (curItem.noscores === undefined) {
+                    if (curItem.noscores === undefined || !curItem.noscores) {
                         curItem.score = curItemScore;
                     } else {
                         curItem.score = undefined;
@@ -373,7 +373,7 @@ $(document).ready(function() {
         for (var i = 0; i < countScores; i++) {
             newHTML += '<div class="riepp-scores-list-summ-item"><div class="riepp-scores-list-summ-item-col">' + scores.summ.scores[i].score + '</div></div>';
             var notScoreClass = '';
-            if (typeof (scores.summ.scores[i].not) != 'undefined') {
+            if (typeof (scores.summ.scores[i].not) != 'undefined' && scores.summ.scores[i].not) {
                 notScoreClass = ' riepp-not-score';
             }
             scoresHTML += '<div class="riepp-scores-summ-scores-item"><div class="riepp-scores-summ-scores-item-user ' + notScoreClass + '">' + scores.summ.scores[i].user + '</div><div class="riepp-scores-summ-scores-item-value">' + scores.summ.scores[i].score + '</div></div>';
@@ -410,7 +410,7 @@ $(document).ready(function() {
                 for (var i = 0; i < countScores; i++) {
                     newHTML += '<div class="riepp-scores-list-criterion-item"><div class="riepp-scores-list-criterion-item-col">' + curCriterion.scores[i].score + '</div></div>';
                     var notScoreClass = '';
-                    if (typeof (curCriterion.scores[i].not) != 'undefined') {
+                    if (typeof (curCriterion.scores[i].not) != 'undefined' && curCriterion.scores[i].not) {
                         notScoreClass = ' riepp-not-score';
                     }
                     scoresHTML += '<div class="riepp-scores-criterion-scores-item"><div class="riepp-scores-criterion-scores-item-user ' + notScoreClass + '">' + curCriterion.scores[i].user + '</div><div class="riepp-scores-criterion-scores-item-value">' + curCriterion.scores[i].score + '</div></div>';
@@ -438,7 +438,7 @@ $(document).ready(function() {
                         newHTML += '<div class="riepp-scores-list-row-item">' + curValue + '</div>';
                         var notScoreClass = '';
                         if (curItem.scores !== undefined) {
-                            if (typeof (curItem.scores[i].not) != 'undefined') {
+                            if (typeof (curItem.scores[i].not) != 'undefined' && curItem.scores[i].not) {
                                 notScoreClass = ' riepp-not-score';
                             }
                             scoresHTML += '<div class="riepp-scores-item-scores-item"><div class="riepp-scores-criterion-scores-item-user ' + notScoreClass + '">' + curItem.scores[i].user + '</div>' + curValue + '</div>';
@@ -465,7 +465,7 @@ $(document).ready(function() {
                 if (groupIndex == 0 && criterionIndex == 0) {
                     for (var criterionScoreIntex = 0; criterionScoreIntex < curCriterion.scores.length; criterionScoreIntex++) {
                         var notScoreClass = '';
-                        if (typeof (curCriterion.scores[criterionScoreIntex].not) != 'undefined') {
+                        if (typeof (curCriterion.scores[criterionScoreIntex].not) != 'undefined' && curCriterion.scores[criterionScoreIntex].not) {
                             notScoreClass = ' riepp-not-score';
                         }
                         curBlock.find('.riepp-scores-list-header').append('<div class="riepp-scores-list-header-item' + notScoreClass + '">' + curCriterion.scores[criterionScoreIntex].user + '</div>');
@@ -480,7 +480,7 @@ $(document).ready(function() {
         for (var i = 0; i < countScores; i++) {
             newHTML += '<div class="riepp-scores-list-summ-item"><div class="riepp-scores-list-summ-item-col">' + scores.summ.scores[i].score + '</div><div class="riepp-scores-list-summ-item-col">' + scores.summ.scores[i].summ + '</div></div>';
             var notScoreClass = '';
-            if (typeof (scores.summ.scores[i].not) != 'undefined') {
+            if (typeof (scores.summ.scores[i].not) != 'undefined' && scores.summ.scores[i].not) {
                 notScoreClass = ' riepp-not-score';
             }
             scoresHTML += '<div class="riepp-scores-summ-scores-item"><div class="riepp-scores-summ-scores-item-user ' + notScoreClass + '">' + scores.summ.scores[i].user + '</div><div class="riepp-scores-summ-scores-item-value">' + scores.summ.scores[i].score + '</div></div>';
