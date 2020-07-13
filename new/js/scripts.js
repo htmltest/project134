@@ -825,6 +825,22 @@ $(document).ready(function() {
         $(this).parent().parent().removeClass('open');
     });
 
+    $('.riepp-voiting-members-container').mCustomScrollbar({
+        axis: 'x',
+        scrollButtons: {enable: true}
+    });
+
+    $('body').on('mouseover', '.riepp-voiting-members-hint', function(e) {
+        $('body .riepp-voiting-members-hint-window-show').remove();
+        $('body').append('<div class="riepp-voiting-members-hint-window-show" style="left:' + $(this).offset().left + 'px; top:' + $(this).offset().top + 'px">' + $(this).find('.riepp-voiting-members-hint-window').html() + '</div>');
+        e.preventDefault();
+    });
+
+    $('body').on('mouseout', '.riepp-voiting-members-hint', function(e) {
+        $('body .riepp-voiting-members-hint-window-show').remove();
+        e.preventDefault();
+    });
+
 });
 
 $(window).on('load resize scroll', function() {
