@@ -402,7 +402,7 @@ blockquote.success_info p b {font-weight:normal; color:#4e4e4e}
 
 @media (max-width:1020px) {
     .expert-request-ctrl .form_sub {margin:0; float:none; width:100%}
-    .expert-request-ctrl-notice {float:none; text-align:center; font-size:12px; margin:5px 0 0 0}
+    .expert-request-ctrl-notice {float:none; text-align:center; font-size:16px; margin:10px 0 0 0}
     .expert-request-ctrl-notice br {display:none}
 }
 
@@ -864,6 +864,7 @@ textarea.inp_typography {height:232px}
 .entry .riepp-request-voiting-ctrl .form_sub {display:inline-block; margin:0 0 0 35px; float:none}
 
 @media screen and (max-width:1020px) {
+    .riepp-request-voiting-anonce {font-weight:normal; max-width:none}
     .riepp-request-voiting-category-title {margin:21px 0}
     .riepp-request-voiting-category-anonce {margin:21px 0}
     .entry .riepp-request-voiting-ctrl .form_sub {display:block; margin:25px 0 0 0}
@@ -874,6 +875,13 @@ textarea.inp_typography {height:232px}
 .riepp-request-voiting-affiliated {color:#848484; font-size:14px; line-height:16px; font-weight:500; display:inline-block; vertical-align:top; letter-spacing:0.03em; padding:16px 20px 15px 20px; background:#fafbbf}
 
 .riepp-voiting-members-container {position:relative; width:100%; overflow:auto}
+
+.riepp-voiting-members-container.mCustomScrollbar::after {content:""; display:block; position:absolute; right:-40px; top:0; bottom:0; width:40px; box-shadow:-10px 0px 40px rgba(0, 0, 0, 0.1); pointer-events:none; z-index:1; opacity:1; transition:all 0.2s}
+.riepp-voiting-members-container.mCustomScrollbar.mCS_no_scrollbar::after,
+.riepp-voiting-members-container.mCustomScrollbar.isRight::after {opacity:0}
+.riepp-voiting-members-container.mCustomScrollbar::before {content:""; display:block; position:absolute; left:-40px; top:0; bottom:0; width:40px; box-shadow:10px 0px 40px rgba(0, 0, 0, 0.1); pointer-events:none; z-index:1; opacity:0; transition:all 0.2s}
+.riepp-voiting-members-container.mCustomScrollbar.isLeft::before {opacity:1}
+.riepp-voiting-members-container.mCustomScrollbar {overflow-x:hidden}
 
 .entry .cabinet-content table tr th.riepp-voiting-members-header-average {border-right:2px solid #1c48a3}
 .entry .cabinet-content table tr td.riepp-voiting-members-category {min-width:632px}
@@ -890,12 +898,12 @@ textarea.inp_typography {height:232px}
     .riepp-voiting-members-container {position:relative; width:auto; overflow:visible}
     .entry .cabinet-content .riepp-voiting-members-container table tr {margin:0}
     .entry .cabinet-content table tr td.riepp-voiting-members-category {min-width:0}
-    .riepp-request-voiting-mobile-title {display:inline-block; vertical-align:middle; margin:0 10px 0 0}
+    .riepp-request-voiting-mobile-title {display:block; margin:0 0 8px 0; font-size:16px; line-height:19px; font-weight:normal; color:#393939}
     .entry .cabinet-content table tr td.riepp-voiting-members-value-summ {display:block; text-align:left}
-    .entry .cabinet-content table tr td.riepp-voiting-members-value-average {display:block; text-align:left; margin:10px 0 0 0; border:none; padding:10px 0}
-    .entry .cabinet-content table tr td.riepp-voiting-members-value-score-not {display:block; text-align:left; margin:10px -10px 0 -10px; padding:10px}
-    .entry .cabinet-content table tr td.riepp-voiting-members-value-score {display:block; text-align:left; margin:10px 0 0 0; padding:10px 0}
-    .entry .cabinet-content table tr td.riepp-voiting-members-value-score-2 {display:block; text-align:left; margin:10px -10px 0 -10px; padding:10px}
+    .entry .cabinet-content table tr td.riepp-voiting-members-value-average {display:block; text-align:left; margin:12px 0 6px 0; border:none; padding:0 0 16px 0; border-bottom:2px solid rgba(28, 72, 163, 0.4)}
+    .entry .cabinet-content table tr td.riepp-voiting-members-value-score-not {display:block; text-align:left; margin:13px 0 0 0; padding:0; background:none}
+    .entry .cabinet-content table tr td.riepp-voiting-members-value-score {display:block; text-align:left; margin:13px 0 0 0; padding:0}
+    .entry .cabinet-content table tr td.riepp-voiting-members-value-score-2 {display:block; text-align:left; margin:13px 0 0 0; padding:0; background:none}
     .entry .cabinet-content table tr td.riepp-voiting-members-value-score img {display:inline-block; vertical-align:middle; margin:0}
 }
 
@@ -904,3 +912,36 @@ textarea.inp_typography {height:232px}
 .riepp-voiting-members-hint-window {display:none}
 .riepp-voiting-members-hint-window-show {position:absolute; margin-left:-71px; margin-top:28px; white-space:normal; z-index:99; width:391px; box-sizing:border-box; background:#fff; box-shadow:0px 4px 40px rgba(0, 0, 0, 0.1); padding:14px 20px; font-weight:normal; font-size:14px; line-height:21px; color:#4e4e4e; text-align:left}
 .riepp-voiting-members-hint-window-show::before {content:""; display:block; position:absolute; left:67px; top:-6px; width:25px; height:25px; background:#fff; transform:rotate(45deg)}
+
+@media screen and (max-width:1020px) {
+    .riepp-request-voiting-table {margin:43px 0 0 0; border-top:2px solid rgba(28, 72, 163, 0.4)}
+    .entry .cabinet-content table.riepp-request-voiting-table tbody tr:nth-child(odd) {background:none}
+    .entry .cabinet-content table.riepp-request-voiting-table tbody tr.riepp-request-voiting-category {border:none; padding:41px 0 23px 0}
+    .entry .cabinet-content table.riepp-request-voiting-table tbody tr.riepp-request-voiting-category:first-child {padding-top:36px}
+    .entry .cabinet-content table.riepp-request-voiting-table tbody tr.riepp-request-voiting-category td {font-size:18px; line-height:27px; font-weight:500; letter-spacing:0.03em; color:#111111}
+    .entry .cabinet-content table.riepp-request-voiting-table tbody tr:not(.riepp-request-voiting-category) td:nth-child(1) {display:inline; font-size:20px; line-height:24px; font-weight:normal}
+    .entry .cabinet-content table.riepp-request-voiting-table tbody tr:not(.riepp-request-voiting-category) td:nth-child(1)::after {content:"."}
+    .entry .cabinet-content table.riepp-request-voiting-table tbody tr:not(.riepp-request-voiting-category) td:nth-child(2) {display:inline; font-size:20px; line-height:24px; font-weight:normal}
+    .riepp-request-voiting-category-title {display:inline; font-size:20px; line-height:24px}
+    .riepp-request-voiting-category-anonce {margin:5px 0 0 0; font-size:16px; line-height:24px}
+    .entry .cabinet-content table.riepp-request-voiting-table tbody tr:not(.riepp-request-voiting-category) td:nth-child(3) {display:block; margin:13px 0 0 0}
+    .entry .cabinet-content table.riepp-request-voiting-table tbody tr:not(.riepp-request-voiting-category) td:nth-child(3) .kr-score-select-voiting {width:160px}
+    .entry .cabinet-content table.riepp-request-voiting-table tbody tr:not(.riepp-request-voiting-category) td:nth-child(3) .kr-score-select-list label span {width:36px; height:36px; line-height:36px}
+    .kr-score-select-voiting .kr-score-select-list {width:288px}
+    .entry .cabinet-content table.riepp-request-voiting-table tbody tr.odd {background:rgba(28, 72, 163, 0.04)}
+
+    .riepp-voiting-members-container {margin:43px 0 0 0; border-top:2px solid rgba(28, 72, 163, 0.4)}
+    .entry .cabinet-content .riepp-voiting-members-container table tbody tr:nth-child(odd) {background:none}
+    .entry .cabinet-content .riepp-voiting-members-container table tbody tr.riepp-voiting-members-category {border:none; padding:41px 0 23px 0}
+    .entry .cabinet-content .riepp-voiting-members-container table tbody tr.riepp-voiting-members-category:first-child {padding-top:36px}
+    .entry .cabinet-content .riepp-voiting-members-container table tbody tr.riepp-voiting-members-category td {font-size:18px; line-height:27px; font-weight:500; letter-spacing:0.03em; color:#111111}
+    .entry .cabinet-content .riepp-voiting-members-container table tbody tr:not(.riepp-voiting-members-category) td:nth-child(1) {display:inline; font-size:20px; line-height:24px; font-weight:normal}
+    .entry .cabinet-content .riepp-voiting-members-container table tbody tr:not(.riepp-voiting-members-category) td:nth-child(1)::after {content:"."}
+    .entry .cabinet-content .riepp-voiting-members-container table tbody tr:not(.riepp-voiting-members-category) td:nth-child(2) {display:inline; font-size:20px; line-height:24px; font-weight:normal}
+    .entry .cabinet-content .riepp-voiting-members-container table tbody tr.odd {background:rgba(28, 72, 163, 0.04)}
+
+    .riepp-voiting-members-hint-icon {width:28px; height:28px; background:url(../images/riepp-request-voiting-hint-mobile.svg) no-repeat}
+    .riepp-voiting-members-hint-window-show {margin-left:-66px; margin-top:33px; width:300px; font-size:16px; line-height:24px}
+
+    .entry .cabinet-content table tr td.riepp-voiting-members-value-summ {padding-top:13px}
+}
