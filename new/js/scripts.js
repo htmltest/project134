@@ -868,6 +868,11 @@ $(document).ready(function() {
         });
     });
 
+    $('.riepp-voiting-members-value-score-all a').click(function(e) {
+        $(this).parents().filter('tr').toggleClass('open');
+        e.preventDefault();
+    });
+
 });
 
 $(window).on('load resize scroll', function() {
@@ -887,8 +892,23 @@ $(window).on('load resize', function() {
     $('.riepp-scores-new').each(function() {
         resizeRieppScoresNew();
     });
-    
+
     if ($(window).width() > 1119) {
+        $('.riepp-voiting-members-container .riepp-voiting-members-col-fixed-titles').html('<div class="riepp-voiting-members-col-fixed-header"><div class="riepp-voiting-members-col-fixed-header-inner" style="height:' + ($('.riepp-voiting-members-container th').eq(1).outerHeight()- 1) + 'px">' + $('.riepp-voiting-members-container th').eq(1).html() + '</div></div>');
+        $('.riepp-voiting-members-container .riepp-voiting-members-col-fixed-summs').html('<div class="riepp-voiting-members-col-fixed-header"><div class="riepp-voiting-members-col-fixed-header-inner" style="height:' + ($('.riepp-voiting-members-container th').eq(2).outerHeight()- 1) + 'px">' + $('.riepp-voiting-members-container th').eq(2).html() + '</div></div>');
+        $('.riepp-voiting-members-container .riepp-voiting-members-category').each(function() {
+            var newText = '';
+            if ($(this).find('.riepp-request-voiting-category-title').length > 0) {
+                newText = $(this).find('.riepp-request-voiting-category-title').html();
+            }
+            var newSumm = '';
+            if ($(this).find('.riepp-request-voiting-category-title').length > 0) {
+                newSumm = $(this).parent().parent().find('.riepp-voiting-members-value-summ').html();
+            }
+            $('.riepp-voiting-members-container .riepp-voiting-members-col-fixed-titles').append('<div class="riepp-voiting-members-col-fixed-row"><div class="riepp-voiting-members-col-fixed-row-inner" style="height:' + ($(this).outerHeight() - 1) + 'px">' + newText + '</div></div>');
+            $('.riepp-voiting-members-container .riepp-voiting-members-col-fixed-summs').append('<div class="riepp-voiting-members-col-fixed-row"><div class="riepp-voiting-members-col-fixed-row-inner" style="height:' + ($(this).outerHeight() - 1) + 'px">' + newSumm + '</div></div>');
+        });
+
         $('.riepp-voiting-members-container').mCustomScrollbar({
             axis: 'x',
             scrollButtons: {enable: true},
@@ -903,6 +923,11 @@ $(window).on('load resize', function() {
                         $('.riepp-voiting-members-container').addClass('isRight');
                     } else {
                         $('.riepp-voiting-members-container').removeClass('isRight');
+                    }
+                    if (-this.mcs.left >= ($('.riepp-voiting-members-container th').eq(0).outerWidth() + $('.riepp-voiting-members-container th').eq(1).outerWidth())) {
+                        $('.riepp-voiting-members-col-fixed').addClass('visible');
+                    } else {
+                        $('.riepp-voiting-members-col-fixed').removeClass('visible');
                     }
                 }
             }
@@ -1084,6 +1109,7 @@ $(window).on('load resize scroll', function() {
         if (curBottom < 0) {
             curBottom = 0;
         }
-        curTools.css({'position': 'fixed', 'left': curTools.parent().offset().left, 'bottom': curBottom, 'right': 'auto', 'width': curTools.parent().width()});
+        curTools.css({'position': 'fixed', 'left': curTools.parent().offset().left, 'bottom': curBottom, 'right': 'auto', 'width': curTools.parent().width(), 'z-index': 2});
+        $('.riepp-voiting-members-col-fixed').css({'left': $('.riepp-voiting-members-container').offset().left, 'top': $('.riepp-voiting-members-container').offset().top - $(window).scrollTop()});
     });
 });
