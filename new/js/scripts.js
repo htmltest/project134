@@ -903,7 +903,7 @@ $(window).on('load resize', function() {
             }
             var newSumm = '';
             if ($(this).find('.riepp-request-voiting-category-title').length > 0) {
-                newSumm = $(this).parent().parent().find('.riepp-voiting-members-value-summ').html();
+                newSumm = $(this).parent().find('.riepp-voiting-members-value-summ').html();
             }
             $('.riepp-voiting-members-container .riepp-voiting-members-col-fixed-titles').append('<div class="riepp-voiting-members-col-fixed-row"><div class="riepp-voiting-members-col-fixed-row-inner" style="height:' + ($(this).outerHeight() - 1) + 'px">' + newText + '</div></div>');
             $('.riepp-voiting-members-container .riepp-voiting-members-col-fixed-summs').append('<div class="riepp-voiting-members-col-fixed-row"><div class="riepp-voiting-members-col-fixed-row-inner" style="height:' + ($(this).outerHeight() - 1) + 'px">' + newSumm + '</div></div>');
