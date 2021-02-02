@@ -5201,16 +5201,20 @@ jQuery(document).ready(function(){
                     });
                     data.context.parent().find('input[type="hidden"]').val(paths);
                     data.context.find('input[type="text"]').attr('name', result.name);
+                    data.context.parent().find('input[type="file"]').removeClass('required');
                     data.context.find('input[type="text"]').val(result.value);
-                    data.context.find('label.error').remove();
+                    data.context.parent().find('label.error').remove();
                     data.context.removeClass('error');
                     data.context.addClass('success');
 				}
                 else{
                     data.context.addClass('error');
                     if (result.message) {
-                        data.context.find('label.error').remove();
+                        data.context.parent().find('label.error').remove();
                         data.context.append('<label class="error">' + result.message + '</label>');
+                    }
+                    if (data.context.parent().find('.fu_file:not(.error)').length < 1) {
+                        data.context.parent().find('input[type="file"]').addClass('required');
                     }
                 }
             },
@@ -5218,24 +5222,28 @@ jQuery(document).ready(function(){
                 data.context.addClass('error');
                 data.context.parent().find('label.error').remove();
                 data.context.append('<label class="error">Ошибка загрузки файла</label>');
+                if (data.context.parent().find('.fu_file:not(.error)').length < 1) {
+                    data.context.parent().find('input[type="file"]').addClass('required');
+                }
             }
         });
     });
 
-	jQuery('.fu_file span').click(function() {
+	jQuery('body').on('click', '.fu_file span', function() {
         var th = jQuery(this).parents().filter('.upload');
         var tpl = jQuery(this).parent();
-        tpl.fadeOut(function(){
-            tpl.remove();
-            var paths = '';
-            th.find('.fu_file').each(function() {
-                if (paths != '') {
-                    paths += ',';
-                }
-                paths += jQuery(this).data('filename');
-            });
-            th.find('input[type="hidden"]').val(paths);
+        tpl.remove();
+        var paths = '';
+        th.find('.fu_file').each(function() {
+            if (paths != '') {
+                paths += ',';
+            }
+            paths += jQuery(this).data('filename');
         });
+        th.find('input[type="hidden"]').val(paths);
+        if (paths == '') {
+            th.find('input[type="file"]').addClass('required');
+        }
     });
 
     jQuery(document).bind('dragover', function (e) {
@@ -5319,41 +5327,31 @@ jQuery(document).ready(function(){
             fu.hide();
 			fu.find('.fu_file').remove();
 			fu.find('input').val('');
+            fu.find('input[type="file"]').removeClass('required');
         } else {
             curCheckbox.parent().parent().find('.upload').show();
+            fu.find('input[type="file"]').addClass('required');
         }
     });
 
-    jQuery('body').on('click', '#form-sub-save', function() {
-        var curForm = $(this).parents().filter('form');
-        curForm.find('.required').removeClass('required');
-    });
-
-    jQuery('#form-sub-send').each(function() {
-        window.setInterval(checkFormSub, 1000);
-    });
-
-    function checkFormSub() {
-        var curForm = jQuery('#form-sub-send').parents().filter('form');
-        var curStatus = true;
-        curForm.find('.required').each(function() {
-			if ((jQuery(this).val() == '' || jQuery(this).hasClass('error')) && !jQuery(this).hasClass('reqcheck')) {
-                curStatus = false;
-            }
-            if(jQuery(this).attr('type')=='checkbox' && jQuery(this).hasClass('reqcheck'))
-			{
-				console.log(jQuery(this).prop("checked"));
-			if (!jQuery(this).prop("checked") || jQuery(this).hasClass('error')) {
-                curStatus = false;
-            }
-			}
-        });
-        if (curStatus) {
-            jQuery('#form-sub-send').removeClass('disabled').removeAttr('disabled');
+    jQuery('input.no-required-file').each(function() {
+        var curCheckbox = jQuery(this);
+		var fu=curCheckbox.parent().parent().find('.upload');
+        if (curCheckbox.prop('checked')) {
+            fu.hide();
+            fu.find('input[type="file"]').removeClass('required');
         } else {
-            jQuery('#form-sub-send').addClass('disabled').attr('disabled', true);
+            curCheckbox.parent().parent().find('.upload').show();
+            fu.find('input[type="file"]').addClass('required');
         }
-    }
+    });
+
+    jQuery('.upload').each(function() {
+        var curBlock = jQuery(this).parent();
+        if (curBlock.find('.fu_file').length > 0) {
+            curBlock.find('input[type="file"]').removeClass('required');
+        }
+    });
 
     jQuery('body').on('click', '#form-sub-save', function() {
         var curForm = $(this).parents().filter('form');

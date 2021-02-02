@@ -977,3 +977,8 @@ textarea.inp_typography {height:232px}
     .riepp-voiting-members-hint-icon {width:28px; height:28px; background:url(../images/riepp-request-voiting-hint-mobile.svg) no-repeat}
     .riepp-voiting-members-hint-window-show {margin-left:-66px; margin-top:33px; width:300px; font-size:16px; line-height:24px}
 }
+
+.upload input[type="file"] {position:absolute; left:0; top:0; display:block; opacity:0; pointer-events:none}
+.field-required {position:absolute; left:5px; bottom:-16px; color:#ec0032; font-size:12px; line-height:14px}
+.upload input.error+.field-required,
+.upload input.error+label.error+.field-required {bottom:-32px}
