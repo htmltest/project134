@@ -896,16 +896,23 @@ $(window).on('load resize', function() {
     if ($(window).width() > 1119) {
         $('.riepp-voiting-members-container .riepp-voiting-members-col-fixed-titles').html('<div class="riepp-voiting-members-col-fixed-header"><div class="riepp-voiting-members-col-fixed-header-inner" style="height:' + ($('.riepp-voiting-members-container th').eq(1).outerHeight()- 1) + 'px">' + $('.riepp-voiting-members-container th').eq(1).html() + '</div></div>');
         $('.riepp-voiting-members-container .riepp-voiting-members-col-fixed-summs').html('<div class="riepp-voiting-members-col-fixed-header"><div class="riepp-voiting-members-col-fixed-header-inner" style="height:' + ($('.riepp-voiting-members-container th').eq(2).outerHeight()- 1) + 'px">' + $('.riepp-voiting-members-container th').eq(2).html() + '</div></div>');
+        $('.riepp-voiting-members-container .riepp-voiting-members-col-fixed-orders').html('<div class="riepp-voiting-members-col-fixed-header"><div class="riepp-voiting-members-col-fixed-header-inner" style="height:' + ($('.riepp-voiting-members-container th').eq(0).outerHeight()- 1) + 'px">' + $('.riepp-voiting-members-container th').eq(0).html() + '</div></div>');
+        $('.riepp-voiting-members-container .riepp-voiting-members-col-fixed-orders').css({'width': $('.riepp-voiting-members-container th').eq(0).outerWidth() + 'px'});
         $('.riepp-voiting-members-container .riepp-voiting-members-category').each(function() {
             var newText = '';
             if ($(this).find('.riepp-request-voiting-category-title').length > 0) {
                 newText = $(this).find('.riepp-request-voiting-category-title').html();
+            }
+            var orderText = '';
+            if ($(this).find('.riepp-request-voiting-category-title').length > 0) {
+                orderText = $(this).parent().find('td').eq(0).html();
             }
             var newSumm = '';
             if ($(this).find('.riepp-request-voiting-category-title').length > 0) {
                 newSumm = $(this).parent().find('.riepp-voiting-members-value-summ').html();
             }
             $('.riepp-voiting-members-container .riepp-voiting-members-col-fixed-titles').append('<div class="riepp-voiting-members-col-fixed-row"><div class="riepp-voiting-members-col-fixed-row-inner" style="height:' + ($(this).outerHeight() - 1) + 'px">' + newText + '</div></div>');
+            $('.riepp-voiting-members-container .riepp-voiting-members-col-fixed-orders').append('<div class="riepp-voiting-members-col-fixed-row"><div class="riepp-voiting-members-col-fixed-row-inner" style="height:' + ($(this).outerHeight() - 1) + 'px">' + orderText + '</div></div>');
             $('.riepp-voiting-members-container .riepp-voiting-members-col-fixed-summs').append('<div class="riepp-voiting-members-col-fixed-row"><div class="riepp-voiting-members-col-fixed-row-inner" style="height:' + ($(this).outerHeight() - 1) + 'px">' + newSumm + '</div></div>');
         });
 
@@ -1112,4 +1119,32 @@ $(window).on('load resize scroll', function() {
         curTools.css({'position': 'fixed', 'left': curTools.parent().offset().left, 'bottom': curBottom, 'right': 'auto', 'width': curTools.parent().width(), 'z-index': 2});
         $('.riepp-voiting-members-col-fixed').css({'left': $('.riepp-voiting-members-container').offset().left, 'top': $('.riepp-voiting-members-container').offset().top - $(window).scrollTop()});
     });
+});
+
+$(document).ready(function() {
+
+    $('body').on('mouseenter', '.riepp-voiting-members-value-score, .riepp-voiting-members-value-score-2, .riepp-voiting-members-value-score-not, .riepp-voiting-members-value-resolution, .riepp-voiting-members-value-resolution-not', function(e) {
+        var curCell = $(this);
+        if (curCell.find('.riepp-voiting-members-value-score-hint').length > 0) {
+            if ($(window).width() > 1020) {
+                $('.riepp-voiting-members-value-score-window').remove();
+                $('body').append('<div class="riepp-voiting-members-value-score-window" style="left:' + (curCell.offset().left + curCell.outerWidth() / 2) + 'px; top:' + (curCell.offset().top + curCell.outerHeight()) + 'px">' + curCell.find('.riepp-voiting-members-value-score-hint').html() + '</div>');
+            }
+        }
+    });
+
+    $('body').on('click', '.riepp-voiting-members-value-score, .riepp-voiting-members-value-score-2, .riepp-voiting-members-value-score-not, .riepp-voiting-members-value-resolution, .riepp-voiting-members-value-resolution-not', function(e) {
+        var curCell = $(this);
+        if (curCell.find('.riepp-voiting-members-value-score-hint').length > 0) {
+            if ($(window).width() < 1021) {
+                $('.riepp-voiting-members-value-score-window').remove();
+                $('body').append('<div class="riepp-voiting-members-value-score-window"><div class="riepp-voiting-members-value-score-window-bg"></div><div class="riepp-voiting-members-value-score-window-container">' + curCell.find('.riepp-voiting-members-value-score-hint').html() + '<a href="#" class="riepp-voiting-members-value-score-window-close"></a></div></div>');
+            }
+        }
+    });
+
+    $('body').on('mouseleave', '.riepp-voiting-members-value-score, .riepp-voiting-members-value-score-2, .riepp-voiting-members-value-score-not, .riepp-voiting-members-value-resolution, .riepp-voiting-members-value-resolution-not', function(e) {
+        $('.riepp-voiting-members-value-score-window').remove();
+    });
+
 });

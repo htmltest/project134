@@ -898,6 +898,7 @@ textarea.inp_typography {height:232px}
 .riepp-voiting-members-col-fixed-titles {float:left; position:relative; width:0; border-right:1px solid #e1e1e1; box-sizing:border-box; padding:0; overflow:hidden; transition:all 0.2s}
 .riepp-voiting-members-col-fixed:hover .riepp-voiting-members-col-fixed-titles {width:300px}
 .riepp-voiting-members-col-fixed-summs {float:left; width:120px; padding:0}
+.riepp-voiting-members-col-fixed-orders {float:left; width:120px; padding:0}
 .riepp-voiting-members-col-fixed-header {float:none; padding:0; display:table; width:100%; background:#fff}
 .riepp-voiting-members-col-fixed-titles .riepp-voiting-members-col-fixed-header {width:300px}
 .riepp-voiting-members-col-fixed-header-inner {float:none; padding:0; display:table-cell; vertical-align:middle; color:#393939; font-size:16px; font-weight:500; line-height:19px; padding:18px 20px 16px 20px; letter-spacing:0.03em; text-transform:none; background:rgba(28, 72, 163, 0.06)}
@@ -982,3 +983,74 @@ textarea.inp_typography {height:232px}
 .field-required {position:absolute; left:5px; bottom:-16px; color:#ec0032; font-size:12px; line-height:14px}
 .upload input.error+.field-required,
 .upload input.error+label.error+.field-required {bottom:-32px}
+
+.riepp-voiting-members-value-score,
+.riepp-voiting-members-value-score-2,
+.riepp-voiting-members-value-score-not,
+.riepp-voiting-members-value-resolution,
+.riepp-voiting-members-value-resolution-2,
+.riepp-voiting-members-value-resolution-not {position:relative; cursor:pointer}
+.riepp-voiting-members-value-score:hover::after,
+.riepp-voiting-members-value-score-2:hover::after,
+.riepp-voiting-members-value-score-not:hover::after,
+.riepp-voiting-members-value-resolution:hover::after,
+.riepp-voiting-members-value-resolution-2:hover::after,
+.riepp-voiting-members-value-resolution-not:hover::after {content:""; display:block; position:absolute; left:0; top:0; right:0; bottom:0; border:2px solid #1c48a3; opacity:0.4; pointer-events:none}
+.riepp-voiting-members-value-score-hint {display:none}
+.riepp-voiting-members-value-score-window {position:absolute; max-width:430px; box-sizing:border-box; margin:-19px 0 0 0; transform:translateX(-50%); padding:15px 20px; background:#fff; z-index:99; border:1px solid #ededed; box-shadow:4px 4px 15px rgba(0, 0, 0, 0.15); pointer-events:none; text-align:left}
+.riepp-voiting-members-value-score-window::before {content:""; display:block; position:absolute; left:50%; top:-6px; width:25px; height:25px; background:#fff; margin-left:-12.5px; transform:rotate(-45deg)}
+.riepp-voiting-members-value-score-hint-text {font-weight:normal; font-size:14px; line-height:21px; color:#666; position:relative}
+.riepp-voiting-members-value-score-hint-author {margin:14px 0 0 0; font-weight:normal; font-size:16px; line-height:24px; color:#4e4e4e}
+.riepp-voiting-members-value-score-hint-author span {font-weight:bold; color:#d22c2c; margin:0 0 0 20px}
+.riepp-voiting-members-value-resolution-title {font-weight:300; font-style:italic; font-size:14px; line-height:21px; color:#666; position:relative}
+.riepp-voiting-members-value-resolution-author {margin:10px 0 0 0; font-weight:normal; font-size:16px; line-height:24px; color:#000}
+.riepp-voiting-members-value-resolution-comment {margin:20px 0 0 0; font-weight:300; font-size:14px; line-height:21px; color:#010101}
+
+.entry .cabinet-content table tr td.riepp-voiting-members-value-resolution-not {background:#e6fee4; font-weight:300; font-size:14px; line-height:18px; text-align:center; vertical-align:middle}
+.entry .cabinet-content table tr td.riepp-voiting-members-value-resolution {background:#ffeaea; font-weight:300; font-size:14px; line-height:18px; text-align:center; vertical-align:middle}
+.entry .cabinet-content table tr td.riepp-voiting-members-value-resolution-2 {background:rgba(255, 255, 41, 0.08); font-weight:300; font-size:14px; line-height:18px; text-align:center; vertical-align:middle}
+.entry .cabinet-content table tr td.riepp-voiting-members-value-resolution em {font-style:normal; border-bottom:1px dashed rgba(0, 0, 0, 0.2)}
+
+.riepp-resolution-container .riepp-voiting-members-col-fixed {width:auto}
+
+@media screen and (max-width:1020px) {
+    .riepp-voiting-members-value-score-window {position:fixed; left:0; top:0; right:0; bottom:0; overflow:auto; z-index:999; width:auto; margin:0; transform:none; padding:0; background:none; border:none; max-width:none; text-align:center; pointer-events:auto}
+    .riepp-voiting-members-value-score-window-bg {position:absolute; left:0; top:0; bottom:0; right:0; background:rgba(0, 0, 0, 0.6)}
+    .riepp-voiting-members-value-score-window::before {content:""; display:inline-block; height:100%; vertical-align:bottom; position:relative; left:auto; top:auto; width:auto; margin:0; transform:none}
+    .riepp-voiting-members-value-score-window-container {display:inline-block; vertical-align:bottom; position:relative; text-align:left; background:#fff; margin:30px 0 0 0; width:100%; padding:46px 20px 40px 20px; box-sizing:border-box}
+    .riepp-voiting-members-value-resolution-title {font-size:16px; line-height:24px}
+    .riepp-voiting-members-value-resolution-author {font-size:20px; line-height:30px}
+    .riepp-voiting-members-value-resolution-comment {font-size:16px; line-height:24px}
+    .riepp-voiting-members-value-score-window-close {display:block; position:absolute; right:10px; top:-46px; width:36px; height:36px; background:url(../images/riepp-voiting-members-value-score-window-close.svg) no-repeat}
+
+    .riepp-voiting-members-value-score:hover::after,
+    .riepp-voiting-members-value-score-2:hover::after,
+    .riepp-voiting-members-value-score-not:hover::after,
+    .riepp-voiting-members-value-resolution:hover::after,
+    .riepp-voiting-members-value-resolution-2:hover::after,
+    .riepp-voiting-members-value-resolution-not:hover::after {display:none}
+    .entry .cabinet-content table tr td.riepp-voiting-members-value-resolution-not {display:block; margin:30px 0 0 0; background:none; text-align:left}
+    .entry .cabinet-content table tr td.riepp-voiting-members-value-resolution-not span {display:inline-block; vertical-align:top; border:1px solid #7fff74; font-size:16px; line-height:21px; text-align:left; padding:9px; background:#e6fee4}
+    .entry .cabinet-content table tr td.riepp-voiting-members-value-resolution {display:block; margin:30px 0 0 0; background:none; text-align:left}
+    .entry .cabinet-content table tr td.riepp-voiting-members-value-resolution span {display:inline-block; vertical-align:top; border:1px solid #ff9090; font-size:16px; line-height:21px; text-align:left; padding:9px; background:#ffeaea}
+    .entry .cabinet-content table tr td.riepp-voiting-members-value-resolution-2 {display:block; margin:30px 0 0 0; background:none; text-align:left}
+    .entry .cabinet-content table tr td.riepp-voiting-members-value-resolution-2 span {display:inline-block; vertical-align:top; border:1px solid #7fff74; font-size:16px; line-height:21px; text-align:left; padding:9px; background:rgba(255, 255, 41, 0.08)}
+    .entry .cabinet-content .riepp-resolution-container table tbody td.riepp-voiting-members-category+td {display:block; border-top:2px solid rgba(28, 72, 163, 0.4); margin-top:30px; padding-top:30px}
+    .entry .cabinet-content .riepp-resolution-container table tr td.riepp-voiting-members-value-score {margin:30px 0 0 0}
+    .entry .cabinet-content .riepp-resolution-container table tr td.riepp-voiting-members-value-score .riepp-request-voiting-mobile-title {position:relative; left:auto; top:auto; transform:none; text-align:left}
+    .entry .cabinet-content .riepp-resolution-container table tr td.riepp-voiting-members-value-score img {display:block; max-height:20px; height:20px; margin:5px 0 0 -3px}
+}
+
+.expert-request-ctrl::after {content:""; display:block; clear:both}
+.riepp-resolution-container+.expert-request-ctrl .center-request-confirm-form {float:right; line-height:24px}
+.riepp-resolution-container+.expert-request-ctrl .center-request-confirm-form label {display:inline-block; vertical-align:middle; margin:12px 0 0 0}
+
+@media (max-width:1020px) {
+    .riepp-resolution-container+.expert-request-ctrl .center-request-confirm-form {float:none; padding:0}
+}
+
+.riepp-resolution-container+.expert-request-ctrl .center-request-confirm-form .form_sub {display:inline-block; vertical-align:middle; margin:0 0 0 35px}
+
+@media (max-width:1020px) {
+    .riepp-resolution-container+.expert-request-ctrl .center-request-confirm-form .form_sub {display:block; margin:25px 0 0 0; width:100%; max-width:none}
+}
