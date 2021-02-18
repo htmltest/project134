@@ -1034,11 +1034,15 @@ textarea.inp_typography {height:232px}
     .entry .cabinet-content table tr td.riepp-voiting-members-value-resolution {display:block; margin:30px 0 0 0; background:none; text-align:left}
     .entry .cabinet-content table tr td.riepp-voiting-members-value-resolution span {display:inline-block; vertical-align:top; border:1px solid #ff9090; font-size:16px; line-height:21px; text-align:left; padding:9px; background:#ffeaea}
     .entry .cabinet-content table tr td.riepp-voiting-members-value-resolution-2 {display:block; margin:30px 0 0 0; background:none; text-align:left}
-    .entry .cabinet-content table tr td.riepp-voiting-members-value-resolution-2 span {display:inline-block; vertical-align:top; border:1px solid #7fff74; font-size:16px; line-height:21px; text-align:left; padding:9px; background:rgba(255, 255, 41, 0.08)}
+    .entry .cabinet-content table tr td.riepp-voiting-members-value-resolution-2 span {display:inline-block; vertical-align:top; border:1px solid rgba(255, 255, 0, 1); font-size:16px; line-height:21px; text-align:left; padding:9px; background:rgba(255, 255, 41, 0.08)}
     .entry .cabinet-content .riepp-resolution-container table tbody td.riepp-voiting-members-category+td {display:block; border-top:2px solid rgba(28, 72, 163, 0.4); margin-top:30px; padding-top:30px}
     .entry .cabinet-content .riepp-resolution-container table tr td.riepp-voiting-members-value-score {margin:30px 0 0 0}
     .entry .cabinet-content .riepp-resolution-container table tr td.riepp-voiting-members-value-score .riepp-request-voiting-mobile-title {position:relative; left:auto; top:auto; transform:none; text-align:left}
     .entry .cabinet-content .riepp-resolution-container table tr td.riepp-voiting-members-value-score img {display:block; max-height:20px; height:20px; margin:5px 0 0 -3px}
+
+    .entry .cabinet-content .riepp-resolution-container table tr td+td+td+td+td+td {display:block; position:absolute; left:-9999px; top:-9999px; opacity:0; transition:opacity 0.5s}
+    .entry .cabinet-content .riepp-resolution-container table tr.open td+td+td+td+td+td {display:block; position:relative; left:auto; top:auto; opacity:1}
+    .entry .cabinet-content .riepp-resolution-container table tr td.riepp-voiting-members-value-score-all {position:relative; left:auto; top:auto; opacity:1}
 }
 
 .expert-request-ctrl::after {content:""; display:block; clear:both}
