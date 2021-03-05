@@ -931,10 +931,18 @@ $(window).on('load resize', function() {
                     } else {
                         $('.riepp-voiting-members-container').removeClass('isRight');
                     }
-                    if (-this.mcs.left >= ($('.riepp-voiting-members-container th').eq(0).outerWidth() + $('.riepp-voiting-members-container th').eq(1).outerWidth())) {
-                        $('.riepp-voiting-members-col-fixed').addClass('visible');
+                    if ($('.riepp-resolution-container').length == 1) {
+                        if (-this.mcs.left >= $('.riepp-resolution-container th').eq(0).outerWidth()) {
+                            $('.riepp-voiting-members-col-fixed').addClass('visible');
+                        } else {
+                            $('.riepp-voiting-members-col-fixed').removeClass('visible');
+                        }
                     } else {
-                        $('.riepp-voiting-members-col-fixed').removeClass('visible');
+                        if (-this.mcs.left >= ($('.riepp-voiting-members-container th').eq(0).outerWidth() + $('.riepp-voiting-members-container th').eq(1).outerWidth())) {
+                            $('.riepp-voiting-members-col-fixed').addClass('visible');
+                        } else {
+                            $('.riepp-voiting-members-col-fixed').removeClass('visible');
+                        }
                     }
                 }
             }
